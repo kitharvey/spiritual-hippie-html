@@ -1,8 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 .left-card,
 .right-card {
   width: 100%;
   padding-top: 40px;
+}
+
+@media screen and (max-width: 640px) {
+  .left-card,
+  .right-card {
+    padding-top: 20px;
+  }
 }
 
 .main-page {
@@ -11,8 +17,20 @@
   min-height: calc(100vh - 3.5625rem);
 }
 
+@media screen and (max-width: 640px) {
+  .main-page {
+    flex-direction: column-reverse;
+  }
+}
+
 .right-card {
   padding-left: 40px;
+}
+
+@media screen and (max-width: 640px) {
+  .right-card {
+    padding-left: 0;
+  }
 }
 
 .right-card .total-wrapper {
@@ -29,7 +47,10 @@
 
 .right-card .total-wrapper .discount {
   color: #e8202d;
-  font-weight: 600;
+}
+
+.right-card .total-wrapper .discount .tag {
+  color: #717171;
 }
 
 .right-card .total-wrapper .total {
@@ -125,6 +146,14 @@
   grid-gap: 40px;
   border-bottom: 1px solid #ced4da;
   padding: 40px 0;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 640px) {
+  .right-card .product {
+    grid-gap: 15px;
+    font-size: 12px;
+  }
 }
 
 .right-card .product .price-wrapper {
@@ -139,13 +168,13 @@
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .right-card .product .price-wrapper .no-price {
   font-weight: normal;
   text-align: left;
-  font-size: 14px;
+  font-size: 0.875em;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -156,7 +185,7 @@
   text-align: left;
   font-weight: bold;
   letter-spacing: 0px;
-  font-size: 20px;
+  font-size: 1.25em;
   color: #e8202d;
   opacity: 1;
 }
@@ -177,7 +206,7 @@
 
 .right-card .product .info .description {
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875em;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -195,7 +224,7 @@
   border-right: 1px solid #d6d6d6;
   line-height: 0.8;
   text-align: left;
-  font-size: 14px;
+  font-size: 0.875em;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -210,7 +239,14 @@
 .right-card .product .img-wrapper {
   box-shadow: 1px 2px 10px #00000029;
   border-radius: 5px;
+  width: 9.8125em;
+  height: 5.1875em;
   position: relative;
+}
+
+.right-card .product .img-wrapper img {
+  width: 100%;
+  height: 100%;
 }
 
 .right-card .product .img-wrapper .qnty {
@@ -219,14 +255,18 @@
   right: 0;
   transform: translateX(50%) translateY(-50%);
   background: #333;
-  color: #fff;
-  font-weight: bold;
-  height: 25px;
-  width: 25px;
+  height: 1.5625em;
+  width: 1.5625em;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.right-card .product .img-wrapper .qnty span {
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
 }
 
 .right-card .advert {
@@ -236,6 +276,12 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+@media screen and (max-width: 640px) {
+  .right-card .advert {
+    padding: 20px;
+  }
 }
 
 .right-card .advert .top {
@@ -286,14 +332,15 @@
 
 .right-card .advert .button span {
   margin-left: 20px;
+  user-select: none;
 }
 
 .right-card .advert .button input[type='checkbox'] {
   appearance: none;
   border: 2px solid #000000;
   outline: none;
-  width: .875rem;
-  height: .875rem;
+  width: .875em;
+  height: .875em;
   border-radius: 1px;
   vertical-align: sub;
   position: relative;
@@ -312,7 +359,7 @@
   left: 0;
   top: 0;
   background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgdmVyc2lvbj0iMS4xIiB4PSIwcHgiIHk9IjBweCI+PHRpdGxlPmljb25fYnlfUG9zaGx5YWtvdjEwPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBmaWxsPSIjZmZmZmZmIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNi4wMDAwMDAsIDI2LjAwMDAwMCkiPjxwYXRoIGQ9Ik0xNy45OTk5ODc4LDMyLjQgTDEwLjk5OTk4NzgsMjUuNCBDMTAuMjI2Nzg5MSwyNC42MjY4MDE0IDguOTczMTg2NDQsMjQuNjI2ODAxNCA4LjE5OTk4Nzc5LDI1LjQgTDguMTk5OTg3NzksMjUuNCBDNy40MjY3ODkxNCwyNi4xNzMxOTg2IDcuNDI2Nzg5MTQsMjcuNDI2ODAxNCA4LjE5OTk4Nzc5LDI4LjIgTDE2LjU4NTc3NDIsMzYuNTg1Nzg2NCBDMTcuMzY2ODIyOCwzNy4zNjY4MzUgMTguNjMzMTUyOCwzNy4zNjY4MzUgMTkuNDE0MjAxNCwzNi41ODU3ODY0IEw0MC41OTk5ODc4LDE1LjQgQzQxLjM3MzE4NjQsMTQuNjI2ODAxNCA0MS4zNzMxODY0LDEzLjM3MzE5ODYgNDAuNTk5OTg3OCwxMi42IEw0MC41OTk5ODc4LDEyLjYgQzM5LjgyNjc4OTEsMTEuODI2ODAxNCAzOC41NzMxODY0LDExLjgyNjgwMTQgMzcuNzk5OTg3OCwxMi42IEwxNy45OTk5ODc4LDMyLjQgWiI+PC9wYXRoPjwvZz48L2c+PC9nPjwvc3ZnPg==");
-  background-size: 40px;
+  background-size: 30px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -322,8 +369,16 @@
   padding-right: 40px;
 }
 
+@media screen and (max-width: 640px) {
+  .left-card {
+    box-shadow: none;
+    padding-right: 0;
+  }
+}
+
 .left-card .guaranteed {
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .left-card h1 {
@@ -348,6 +403,14 @@
   margin: 5px 0;
 }
 
+@media screen and (max-width: 640px) {
+  .left-card .input,
+  .left-card select {
+    margin: 0;
+    border-radius: 0px;
+  }
+}
+
 .left-card .input:focus-within,
 .left-card .input :focus,
 .left-card select:focus-within,
@@ -360,6 +423,30 @@
 .left-card input,
 .left-card select {
   appearance: none;
+}
+
+@media screen and (max-width: 640px) {
+  .left-card .add .input {
+    border: 0.5px solid #ced4da;
+    border-top: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .left-card .add .input:first-child {
+    border-top: 0.5px solid #ced4da;
+  }
+}
+
+.left-card .add select {
+  border: 0.5px solid #ced4da;
+}
+
+@media screen and (max-width: 640px) {
+  .left-card .add select {
+    border: 0.5px solid #ced4da;
+    border-top: none;
+  }
 }
 
 .left-card .select {
@@ -391,15 +478,36 @@
   grid-gap: 20px;
 }
 
+@media screen and (max-width: 640px) {
+  .left-card .grid-2 {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+}
+
 .left-card .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 
+@media screen and (max-width: 640px) {
+  .left-card .grid-3 {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+}
+
 .left-card .title {
   letter-spacing: 0.07px;
   font-size: 20px;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 640px) {
+  .left-card .title {
+    margin-bottom: 10px;
+  }
 }
 
 .left-card .submit-button {
@@ -415,8 +523,16 @@
   margin-bottom: 30px;
   margin-top: 10px;
   margin-left: auto;
+  margin-right: 0;
   text-align: center;
   cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .left-card .submit-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .left-card .buttons-wrapper {
@@ -511,6 +627,17 @@
   padding: 10px;
 }
 
+.left-card .creditcard-wrapper .cc-input-wrapper .input {
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 640px) {
+  .left-card .creditcard-wrapper .cc-input-wrapper .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+}
+
 .modal-wrapper {
   width: 100%;
   height: 100%;
@@ -542,6 +669,8 @@
   top: -15px;
   background: none;
   cursor: pointer;
+  height: 40px;
+  width: 40px;
 }
 
 .modal-wrapper .modal .submit-button {
@@ -566,8 +695,13 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Hurme-Geometric-Sans-3';
+  src: url(/assets/fonts/HurmeGeometricSans3.otf), url(/assets/fonts/HurmeGeometricSans3Black.otf), url(/assets/fonts/HurmeGeometricSans3BlackOblique.otf), url(/assets/fonts/HurmeGeometricSans3Bold.otf), url(/assets/fonts/HurmeGeometricSans3BoldOblique.otf), url(/assets/fonts/HurmeGeometricSans3Hairline.otf), url(/assets/fonts/HurmeGeometricSans3HairlineOblique.otf), url(/assets/fonts/HurmeGeometricSans3Light.otf), url(/assets/fonts/HurmeGeometricSans3LightOblique.otf), url(/assets/fonts/HurmeGeometricSans3Oblique.otf), url(/assets/fonts/HurmeGeometricSans3SemiBold.otf), url(/assets/fonts/HurmeGeometricSans3SemiBoldOblique.otf), url(/assets/fonts/HurmeGeometricSans3Thin.otf), url(/assets/fonts/HurmeGeometricSans3ThinOblique.otf);
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Hurme-Geometric-Sans-3';
 }
 
 a {
@@ -616,10 +750,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.5625rem;
+  min-height: 3.5625rem;
   width: 100%;
+  padding: 10px 0;
   background: transparent url("/assets/Footer BG.svg") 0% 0% no-repeat padding-box;
   color: #717171;
+}
+
+@media screen and (max-width: 640px) {
+  footer {
+    flex-direction: column;
+  }
 }
 
 footer .brand {
@@ -627,6 +768,13 @@ footer .brand {
   font-weight: bold;
   letter-spacing: 0.8px;
   text-align: left;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 640px) {
+  footer .brand {
+    margin-bottom: 10px;
+  }
 }
 
 footer .footer-menu {

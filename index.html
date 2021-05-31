@@ -20,6 +20,7 @@
                     tabIndex="0"
                     aria-hidden="true"
                     class="button idle"
+                    id="shipping-button"
                   >
                     <span>Shipping</span>
                   </div>
@@ -28,18 +29,19 @@
                     tabIndex="1"
                     aria-hidden="true"
                     class="button active"
+                    id="payment-button"
                   >
                     <span>Payment</span>
                   </div>
                 </div>     
 
 
-                <div class="shipping-wrapper">
+                <div class="shipping-wrapper" id="shipping-dom">
                     <div class="input-wrapper">
                       <p class="title">Contact Information</p>
                       <input class="input" type="email" placeholder="Email" />
                     </div>
-                    <div class="input-wrapper">
+                    <div class="input-wrapper add">
                       <p class="title">Shipping Address</p>
                       <div class="grid-2">
                         <input class="input" type="text" placeholder="First name" />
@@ -61,20 +63,21 @@
               
                         <input class="input" type="text" placeholder="Postal Code" />
                       </div>
-                      <input class="input" type="tel" placeholder="Phone number (optional)" />
+                      <input class="input button-border" type="tel" placeholder="Phone number (optional)" />
                     </div>
                     <div
                       role="button"
-                      tabIndex={-5}
+                      tabIndex="5"
                       aria-hidden="true"
                       class="submit-button"
+                      id="continue-to-payment"
                     >
                       CONTINUE TO PAYMENT
                     </div>
                   </div>
 
 
-                  <div class="payment-wrapper">
+                  <div class="payment-wrapper" id="payment-dom">
                     <div class="input-wrapper">
                       <p class="title">Shipping method</p>
                       <label class="input header">
@@ -82,7 +85,7 @@
                         <span>Secured Shipping</span>
                       </label>
                     </div>
-                    <div class="input-wrapper">
+                    <div class="input-wrapper add">
                       <p class="title">Billing address</p>
                       <label class="input header">
                         <input type="radio" id="creditcard" value="creditcard" name="ship-add" />
@@ -131,6 +134,7 @@
                       tabIndex={-4}
                       aria-hidden="true"
                       class="submit-button"
+                      id="complete-order"
                     >
                       Complete order
                     </div>
@@ -139,7 +143,30 @@
 
                 <img class="guaranteed" src="/assets/Guaranteed_two@2x.png" alt="Guaranteed"/>
           
-                <!-- {isComplete && <Modal setIsComplete={setIsComplete} />} -->
+                <div class="modal-wrapper" id="modal">
+                  <div class="modal">
+                    <div
+                      role="button"
+                      tabIndex='2'
+                      aria-hidden="true"
+                      class="close-button"
+                      id="close-modal"
+                    >
+                      <img src="/assets/Xbutton.svg" alt="close-button" />
+                    </div>
+                    <p>Your Payment Method was declined.</p>
+                    <p>Please try another Payment Method.</p>
+                    <div
+                      role="button"
+                      tabIndex='3'
+                      aria-hidden="true"
+                      class="submit-button"
+                      id="close-modal"
+                    >
+                      ok, try another payment method
+                    </div>
+                  </div>
+                </div>
             </div>
 
 
@@ -168,7 +195,9 @@
                     <div class="product">
                         <div class="img-wrapper">
                           <img src="/assets/shoe3-1.png" alt="Yin Yang Mandala" />
-                          <div class="qnty">1</div>
+                          <div class="qnty">
+                            <span>1</span>
+                          </div>
                         </div>
                   
                         <div class="info">
@@ -188,7 +217,9 @@
                     <div class="product">
                         <div class="img-wrapper">
                           <img src="/assets/shoe2-1.png" alt="Yin Yang Mandala" />
-                          <div class="qnty">1</div>
+                          <div class="qnty">
+                            <span>1</span>
+                          </div>
                         </div>
                   
                         <div class="info">
@@ -207,7 +238,9 @@
                     <div class="product">
                         <div class="img-wrapper">
                           <img src="/assets/shoe1-1.png" alt="Watercolor Flowers" />
-                          <div class="qnty">2</div>
+                          <div class="qnty">
+                            <span>2</span>
+                          </div>
                         </div>
                   
                         <div class="info">
@@ -226,7 +259,9 @@
                     <div class="product">
                         <div class="img-wrapper">
                           <img src="/assets/GiftYWV1.png" alt="Copy of Free Mystery Gift" />
-                          <div class="qnty">1</div>
+                          <div class="qnty">
+                            <span>1</span>
+                          </div>
                         </div>
                   
                         <div class="info">
@@ -244,7 +279,9 @@
                     <div class="product">
                         <div class="img-wrapper">
                           <img src="/assets/SafeGuard.png" alt="Safeguard - Shipping Guarantee" />
-                          <div class="qnty">1</div>
+                          <div class="qnty">
+                            <span>1</span>
+                          </div>
                         </div>
                   
                         <div class="info">
@@ -272,7 +309,7 @@
                     </div>
               
                     <div class="tag-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21.697" height="24.212" viewBox="0 0 21.697 24.212"><defs><style>.a{fill:none;stroke:#717171;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><g transform="translate(0.855 0.75)"><path class="a" d="M512.257,886.814l-7.071-7.071a1,1,0,0,1,0-1.415L516.5,867.015l6.948.631a1,1,0,0,1,.906.906l.631,6.948-11.313,11.314A1,1,0,0,1,512.257,886.814Z" transform="translate(-504.893 -864.5)"/><line class="a" x1="6.364" y2="6.364" transform="translate(5.242 8.172)"/><line class="a" x1="6.364" y2="6.364" transform="translate(8.071 11)"/><path class="a" d="M521.75,870.5c-1.243,0-2.25-1.343-2.25-3s1.007-3,2.25-3,2.25,1.343,2.25,3" transform="translate(-504.893 -864.5)"/></g></svg>
+                      <svg id="tags-filled" width="18px" height="18px"><g xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M17.78 3.09C17.45 2.443 16.778 2 16 2h-5.165c-.535 0-1.046.214-1.422.593l-6.82 6.89c0 .002 0 .003-.002.003-.244.253-.412.554-.5.874L.74 8.055c-.56-.953-.24-2.178.712-2.737L9.823.425c.46-.27 1.01-.345 1.527-.205l4.99 1.337c.755.203 1.293.814 1.44 1.533z" fill-opacity=".55"></path><path d="M10.835 2H16c1.105 0 2 .895 2 2v5.172c0 .53-.21 1.04-.586 1.414l-6.818 6.818c-.777.778-2.036.782-2.82.01l-5.166-5.1c-.786-.775-.794-2.04-.02-2.828.002 0 .003 0 .003-.002l6.82-6.89C9.79 2.214 10.3 2 10.835 2zM13.5 8c.828 0 1.5-.672 1.5-1.5S14.328 5 13.5 5 12 5.672 12 6.5 12.672 8 13.5 8z"></path></g></svg>
                       <p>BOGO</p>
                       <div class="button" role="button" tabIndex="7" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><style>.a{fill:none;}.b{isolation:isolate;clip-path:url(#a);}.c{fill:#717171;}</style><clipPath id="a"><rect class="a" width="16" height="16"/></clipPath></defs><g class="b"><path class="c" d="M7.778,9.192,1.414,15.557,0,14.142,6.364,7.778,0,1.414,1.414,0,7.778,6.364,14.142,0l1.415,1.414L9.192,7.778l6.364,6.364-1.415,1.415Z"/></g></svg>
@@ -288,17 +325,25 @@
                         <p>$105.98</p>
                       </div>
                       <div class="flex-row discount">
-                        <p>Discount</p>
+                        <p className="">
+                          <span>Discount&nbsp;&nbsp;</span>
+                          <span class="tag" >
+                            <svg id="tags-filled" width="18px" height="18px"><g xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M17.78 3.09C17.45 2.443 16.778 2 16 2h-5.165c-.535 0-1.046.214-1.422.593l-6.82 6.89c0 .002 0 .003-.002.003-.244.253-.412.554-.5.874L.74 8.055c-.56-.953-.24-2.178.712-2.737L9.823.425c.46-.27 1.01-.345 1.527-.205l4.99 1.337c.755.203 1.293.814 1.44 1.533z" fill-opacity=".55"></path><path d="M10.835 2H16c1.105 0 2 .895 2 2v5.172c0 .53-.21 1.04-.586 1.414l-6.818 6.818c-.777.778-2.036.782-2.82.01l-5.166-5.1c-.786-.775-.794-2.04-.02-2.828.002 0 .003 0 .003-.002l6.82-6.89C9.79 2.214 10.3 2 10.835 2zM13.5 8c.828 0 1.5-.672 1.5-1.5S14.328 5 13.5 5 12 5.672 12 6.5 12.672 8 13.5 8z"></path></g></svg>
+                            &nbsp;BOGO
+                          </span>
+                        </p>
                         <p>-$35.00</p>
                       </div>
                       <div class="flex-row">
                         <p>Shipping</p>
-                        <p>Calculating</p>
+                        <p>Calculated at next step</p>
                       </div>
                     </div>
                     <div class="total flex-row">
                       <p>Total</p>
-                      <p>$70.98</p>
+                      <p>
+                        <span>USD</span>$70.98
+                      </p>
                     </div>
                 </div>
             </div>
@@ -327,4 +372,5 @@
         </div>
       </footer>
 </body>
+<script src="script.js" ></script>
 </html>

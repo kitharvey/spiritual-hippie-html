@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 @import "page";
 @import "rightcard";
 @import "leftcard";
@@ -11,8 +10,26 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Hurme-Geometric-Sans-3';
+  src: url(/assets/fonts/HurmeGeometricSans3.otf),
+    url(/assets/fonts/HurmeGeometricSans3Black.otf),
+    url(/assets/fonts/HurmeGeometricSans3BlackOblique.otf),
+    url(/assets/fonts/HurmeGeometricSans3Bold.otf),
+    url(/assets/fonts/HurmeGeometricSans3BoldOblique.otf),
+    url(/assets/fonts/HurmeGeometricSans3Hairline.otf),
+    url(/assets/fonts/HurmeGeometricSans3HairlineOblique.otf),
+    url(/assets/fonts/HurmeGeometricSans3Light.otf),
+    url(/assets/fonts/HurmeGeometricSans3LightOblique.otf),
+    url(/assets/fonts/HurmeGeometricSans3Oblique.otf),
+    url(/assets/fonts/HurmeGeometricSans3SemiBold.otf),
+    url(/assets/fonts/HurmeGeometricSans3SemiBoldOblique.otf),
+    url(/assets/fonts/HurmeGeometricSans3Thin.otf),
+    url(/assets/fonts/HurmeGeometricSans3ThinOblique.otf);
+}
+
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Hurme-Geometric-Sans-3';
 }
 
 a {
@@ -46,15 +63,26 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3.5625rem;
+  min-height: 3.5625rem;
   width: 100%;
+  padding: 10px 0;
   background: transparent url("/assets/Footer BG.svg") 0% 0% no-repeat padding-box;
   color: #717171;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+
   .brand {
     font-size: 0.8125rem;
     font-weight: bold;
     letter-spacing: 0.8px;
     text-align: left;
+    margin-bottom: 0px;
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: 10px;
+    }
   }
 
   .footer-menu {
