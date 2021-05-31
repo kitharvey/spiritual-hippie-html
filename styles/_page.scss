@@ -1,0 +1,11 @@
+.left-card,
+.right-card {
+  width: 100%;
+  padding-top: 40px;
+}
+
+.main-page {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - 3.5625rem);
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Hippie</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-page">
+
+            <div class="left-card">
+                <h1>Spiritual Hippie</h1>
+                <div class="buttons-wrapper">
+                  <div
+                    role="button"
+                    tabIndex="0"
+                    aria-hidden="true"
+                    class="button idle"
+                  >
+                    <span>Shipping</span>
+                  </div>
+                  <div
+                    role="button"
+                    tabIndex="1"
+                    aria-hidden="true"
+                    class="button active"
+                  >
+                    <span>Payment</span>
+                  </div>
+                </div>     
+
+
+                <div class="shipping-wrapper">
+                    <div class="input-wrapper">
+                      <p class="title">Contact Information</p>
+                      <input class="input" type="email" placeholder="Email" />
+                    </div>
+                    <div class="input-wrapper">
+                      <p class="title">Shipping Address</p>
+                      <div class="grid-2">
+                        <input class="input" type="text" placeholder="First name" />
+                        <input class="input" type="text" placeholder="Last name" />
+                      </div>
+                      <input class="input" type="text" placeholder="Address" />
+                      <input class="input" type="text" placeholder="City" />
+                      <div class="grid-3">
+                        <div class="select">
+                          <select>
+                            <option>Select Country</option>
+                          </select>
+                        </div>
+                        <div class="select">
+                          <select>
+                            <option>Province</option>
+                          </select>
+                        </div>
+              
+                        <input class="input" type="text" placeholder="Postal Code" />
+                      </div>
+                      <input class="input" type="tel" placeholder="Phone number (optional)" />
+                    </div>
+                    <div
+                      role="button"
+                      tabIndex={-5}
+                      aria-hidden="true"
+                      class="submit-button"
+                    >
+                      CONTINUE TO PAYMENT
+                    </div>
+                  </div>
+
+
+                  <div class="payment-wrapper">
+                    <div class="input-wrapper">
+                      <p class="title">Shipping method</p>
+                      <label class="input header">
+                        <input type="radio" id="creditcard" value="creditcard" name="ship-method" />
+                        <span>Secured Shipping</span>
+                      </label>
+                    </div>
+                    <div class="input-wrapper">
+                      <p class="title">Billing address</p>
+                      <label class="input header">
+                        <input type="radio" id="creditcard" value="creditcard" name="ship-add" />
+                        <span>Same as shipping address</span>
+                      </label>
+                      <label class="input header">
+                        <input type="radio" id="creditcard" value="creditcard" name="ship-add" />
+                        <span>Use a different billing address</span>
+                      </label>
+                    </div>
+                    <div class="input-wrapper payment">
+                      <p class="title">Payment</p>
+                      <small>All transactions are secured and encrypted</small>
+                      <div class="creditcard-wrapper">
+                        <label class="input header">
+                          <input
+                            class="input"
+                            type="radio"
+                            id="creditcard"
+                            value="creditcard"
+                            name="payment"
+                          />
+                          <span>Credit Card</span>
+                        </label>
+                        <div class="cc-input-wrapper">
+                          <input class="input" type="text" placeholder="Card number" />
+                          <input class="input" type="text" placeholder="Name on the card" />
+                          <div class="grid-3">
+                            <input class="input" type="text" placeholder="Month" />
+                            <input class="input" type="text" placeholder="Year" />
+                            <input class="input" type="text" placeholder="Security code" />
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <label class="input header">
+                          <input type="radio" id="paypal" value="paypal" name="payment" />
+                          <span>
+                            <Image src="/assets/paypal-icon.png" height={29} width={93} />
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div
+                      role="button"
+                      tabIndex={-4}
+                      aria-hidden="true"
+                      class="submit-button"
+                    >
+                      Complete order
+                    </div>
+                  </div>
+
+
+                <img class="guaranteed" src="/assets/Guaranteed_two@2x.png" alt="Guaranteed"/>
+          
+                <!-- {isComplete && <Modal setIsComplete={setIsComplete} />} -->
+            </div>
+
+
+            <div class="right-card">
+                <!-- <Advert /> -->
+                <div class="advert">
+                    <div class="top">
+                      <img
+                        src="/assets/BandanaSpiritualEdited_500x500.png"
+                        alt="Bandana Spiritual Edited"
+                      />
+                      <div class="details">
+                        <p class="name">Vibe With These Face Shields!</p>
+                        <p class="price">
+                          <span>$24.99</span> $6.95
+                        </p>
+                      </div>
+                    </div>
+                    <label class="button" role="button" tabIndex="6" aria-hidden="true">
+                      <input type="checkbox" id="addtomyorder" name="addtomyorder" />
+                      <span>ADD TO MY ORDER</span>
+                    </label>
+                </div>
+
+                <div>
+                    <div class="product">
+                        <div class="img-wrapper">
+                          <img src="/assets/shoe3-1.png" alt="Yin Yang Mandala" />
+                          <div class="qnty">1</div>
+                        </div>
+                  
+                        <div class="info">
+                          <p class="name">Yin Yang Mandala</p>
+                          <p class="description">Women's Aqua Barefoot Shoes</p>
+                          <div class="details">
+                            <p>Black Sole</p>
+                            <p>US 9-10</p>
+                            <p>EU40-41</p>
+                          </div>
+                        </div>
+                        <div class="price-wrapper">
+                          <p class="no-price">$35.00</p>
+                          <p class="free">FREE</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="img-wrapper">
+                          <img src="/assets/shoe2-1.png" alt="Yin Yang Mandala" />
+                          <div class="qnty">1</div>
+                        </div>
+                  
+                        <div class="info">
+                          <p class="name">Yin Yang Mandala</p>
+                          <p class="description">Women's Aqua Barefoot Shoes</p>
+                          <div class="details">
+                            <p>Black Sole</p>
+                            <p>US 9-10</p>
+                            <p>EU40-41</p>
+                          </div>
+                        </div>
+                        <div class="price-wrapper">
+                          <p class="price">$35.00</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="img-wrapper">
+                          <img src="/assets/shoe1-1.png" alt="Watercolor Flowers" />
+                          <div class="qnty">2</div>
+                        </div>
+                  
+                        <div class="info">
+                          <p class="name">Watercolor Flowers</p>
+                          <p class="description">Women's Aqua Barefoot Shoes</p>
+                          <div class="details">
+                            <p>Black Sole</p>
+                            <p>US 9-10</p>
+                            <p>EU40-41</p>
+                          </div>
+                        </div>
+                        <div class="price-wrapper">
+                          <p class="price">$35.00</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="img-wrapper">
+                          <img src="/assets/GiftYWV1.png" alt="Copy of Free Mystery Gift" />
+                          <div class="qnty">1</div>
+                        </div>
+                  
+                        <div class="info">
+                          <p class="name">Copy of Free Mystery Gift</p>
+                          <div class="details">
+                            <p>Free Gift</p>
+                            <p>Vibrant Vibes</p>
+                            <p>One Size</p>
+                          </div>
+                        </div>
+                        <div class="price-wrapper">
+                          <p class="price">$0.00</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="img-wrapper">
+                          <img src="/assets/SafeGuard.png" alt="Safeguard - Shipping Guarantee" />
+                          <div class="qnty">1</div>
+                        </div>
+                  
+                        <div class="info">
+                          <p class="name">Safeguard - Shipping Guarantee</p>
+                          <p class="description">Safeguard shipping guarantee</p>
+                          <div class="details">
+                            <p>0.98</p>
+                          </div>
+                        </div>
+                        <div class="price-wrapper">
+                          <p class="price">$0.98</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <Coupon /> -->
+
+                <div class="coupon-wrapper">
+                    <div class="input-wrapper">
+                      <input class="input" type="text" placeholder="Woohoo! Congrats!" />
+                      <div class="button" role="button" tabIndex="10" aria-hidden="true">
+                        Apply
+                      </div>
+                    </div>
+              
+                    <div class="tag-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21.697" height="24.212" viewBox="0 0 21.697 24.212"><defs><style>.a{fill:none;stroke:#717171;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><g transform="translate(0.855 0.75)"><path class="a" d="M512.257,886.814l-7.071-7.071a1,1,0,0,1,0-1.415L516.5,867.015l6.948.631a1,1,0,0,1,.906.906l.631,6.948-11.313,11.314A1,1,0,0,1,512.257,886.814Z" transform="translate(-504.893 -864.5)"/><line class="a" x1="6.364" y2="6.364" transform="translate(5.242 8.172)"/><line class="a" x1="6.364" y2="6.364" transform="translate(8.071 11)"/><path class="a" d="M521.75,870.5c-1.243,0-2.25-1.343-2.25-3s1.007-3,2.25-3,2.25,1.343,2.25,3" transform="translate(-504.893 -864.5)"/></g></svg>
+                      <p>BOGO</p>
+                      <div class="button" role="button" tabIndex="7" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><style>.a{fill:none;}.b{isolation:isolate;clip-path:url(#a);}.c{fill:#717171;}</style><clipPath id="a"><rect class="a" width="16" height="16"/></clipPath></defs><g class="b"><path class="c" d="M7.778,9.192,1.414,15.557,0,14.142,6.364,7.778,0,1.414,1.414,0,7.778,6.364,14.142,0l1.415,1.414L9.192,7.778l6.364,6.364-1.415,1.415Z"/></g></svg>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- <SubTotal /> -->
+                <div class="total-wrapper">
+                    <div class="subtotal-wrapper">
+                      <div class="flex-row">
+                        <p>Subtotal</p>
+                        <p>$105.98</p>
+                      </div>
+                      <div class="flex-row discount">
+                        <p>Discount</p>
+                        <p>-$35.00</p>
+                      </div>
+                      <div class="flex-row">
+                        <p>Shipping</p>
+                        <p>Calculating</p>
+                      </div>
+                    </div>
+                    <div class="total flex-row">
+                      <p>Total</p>
+                      <p>$70.98</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <a class="brand" href="/">
+          Spiritual Hippie
+        </a>
+        <div class="footer-menu">
+          <a href="/Support">
+            Support
+          </a>
+          <a href="/Track Order">
+            Track Order
+          </a>
+          <a href="/Privacy Policy">
+            Privacy Policy
+          </a>
+          <a href="/Terms of Service">
+            Terms of Service
+          </a>
+        </div>
+      </footer>
+</body>
+</html>

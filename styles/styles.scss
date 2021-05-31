@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+@import "page";
+@import "rightcard";
+@import "leftcard";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+  @media screen and (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+  @media screen and (min-width: 1536px) {
+    max-width: 1536px;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5625rem;
+  width: 100%;
+  background: transparent url("/assets/Footer BG.svg") 0% 0% no-repeat padding-box;
+  color: #717171;
+  .brand {
+    font-size: 0.8125rem;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-align: left;
+  }
+
+  .footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: .875rem;
+    a {
+      text-align: left;
+      font-size: 0.8125rem;
+      letter-spacing: 0.04px;
+      font-size: .6875rem;
+      padding-left: .875rem;
+      margin-left: .875rem;
+      border-left: 1px solid #bdbdbd;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+}
