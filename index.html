@@ -19,7 +19,7 @@
                     role="button"
                     tabIndex="0"
                     aria-hidden="true"
-                    class="button idle"
+                    class="button active"
                     id="shipping-button"
                   >
                     <span>Shipping</span>
@@ -28,7 +28,7 @@
                     role="button"
                     tabIndex="1"
                     aria-hidden="true"
-                    class="button active"
+                    class="button idle"
                     id="payment-button"
                   >
                     <span>Payment</span>
@@ -109,6 +109,7 @@
                             name="payment"
                           />
                           <span>Credit Card</span>
+                          <img src="/assets/CC.jpg" alt="creditcards logo">
                         </label>
                         <div class="cc-input-wrapper">
                           <input class="input" type="text" placeholder="Card number" />
@@ -124,7 +125,7 @@
                         <label class="input header">
                           <input type="radio" id="paypal" value="paypal" name="payment" />
                           <span>
-                            <Image src="/assets/paypal-icon.png" height={29} width={93} />
+                            <img src="/assets/paypal-icon.png" alt="paypal logo" />
                           </span>
                         </label>
                       </div>
@@ -191,7 +192,8 @@
                     </label>
                 </div>
 
-                <div>
+                <div class="order-wrapper" id="order-wrapper">
+                  <div>
                     <div class="product">
                         <div class="img-wrapper">
                           <img src="/assets/shoe3-1.png" alt="Yin Yang Mandala" />
@@ -318,37 +320,48 @@
                   </div>
 
                 <!-- <SubTotal /> -->
-                <div class="total-wrapper">
-                    <div class="subtotal-wrapper">
-                      <div class="flex-row">
-                        <p>Subtotal</p>
-                        <p>$105.98</p>
+                  <div class="total-wrapper">
+                      <div class="subtotal-wrapper">
+                        <div class="flex-row">
+                          <p>Subtotal</p>
+                          <p>$105.98</p>
+                        </div>
+                        <div class="flex-row discount">
+                          <div class="discount-wrapper">
+                            <p>Discount</p>
+                            <div class="tag" >
+                              <svg id="tags-filled" width="18px" height="18px"><g xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M17.78 3.09C17.45 2.443 16.778 2 16 2h-5.165c-.535 0-1.046.214-1.422.593l-6.82 6.89c0 .002 0 .003-.002.003-.244.253-.412.554-.5.874L.74 8.055c-.56-.953-.24-2.178.712-2.737L9.823.425c.46-.27 1.01-.345 1.527-.205l4.99 1.337c.755.203 1.293.814 1.44 1.533z" fill-opacity=".55"></path><path d="M10.835 2H16c1.105 0 2 .895 2 2v5.172c0 .53-.21 1.04-.586 1.414l-6.818 6.818c-.777.778-2.036.782-2.82.01l-5.166-5.1c-.786-.775-.794-2.04-.02-2.828.002 0 .003 0 .003-.002l6.82-6.89C9.79 2.214 10.3 2 10.835 2zM13.5 8c.828 0 1.5-.672 1.5-1.5S14.328 5 13.5 5 12 5.672 12 6.5 12.672 8 13.5 8z"></path></g></svg>
+                              <span>BOGO</span>
+                            </div>
+                          </div>
+                          <p>-$35.00</p>
+                        </div>
+                        <div class="flex-row">
+                          <p>Shipping</p>
+                          <p>Calculated at next step</p>
+                        </div>
                       </div>
-                      <div class="flex-row discount">
-                        <p className="">
-                          <span>Discount&nbsp;&nbsp;</span>
-                          <span class="tag" >
-                            <svg id="tags-filled" width="18px" height="18px"><g xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M17.78 3.09C17.45 2.443 16.778 2 16 2h-5.165c-.535 0-1.046.214-1.422.593l-6.82 6.89c0 .002 0 .003-.002.003-.244.253-.412.554-.5.874L.74 8.055c-.56-.953-.24-2.178.712-2.737L9.823.425c.46-.27 1.01-.345 1.527-.205l4.99 1.337c.755.203 1.293.814 1.44 1.533z" fill-opacity=".55"></path><path d="M10.835 2H16c1.105 0 2 .895 2 2v5.172c0 .53-.21 1.04-.586 1.414l-6.818 6.818c-.777.778-2.036.782-2.82.01l-5.166-5.1c-.786-.775-.794-2.04-.02-2.828.002 0 .003 0 .003-.002l6.82-6.89C9.79 2.214 10.3 2 10.835 2zM13.5 8c.828 0 1.5-.672 1.5-1.5S14.328 5 13.5 5 12 5.672 12 6.5 12.672 8 13.5 8z"></path></g></svg>
-                            &nbsp;BOGO
-                          </span>
+                      <div class="total flex-row">
+                        <p>Total</p>
+                        <p>
+                          <span>USD</span>$70.98
                         </p>
-                        <p>-$35.00</p>
                       </div>
-                      <div class="flex-row">
-                        <p>Shipping</p>
-                        <p>Calculated at next step</p>
-                      </div>
-                    </div>
-                    <div class="total flex-row">
-                      <p>Total</p>
-                      <p>
-                        <span>USD</span>$70.98
-                      </p>
-                    </div>
+                  </div>
                 </div>
-            </div>
-            </div>
 
+                <div class="order-summary-button" role="button" tabIndex="11" aria-hidden="true" id="order-summary-button">
+                  <div class="order-title" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><g transform="translate(-456 -1008)"><path class="a" d="M461.5,1013.5h18l-3.761,10.342a1,1,0,0,1-.939.658H463.383a1,1,0,0,1-.993-.876L460.5,1008.5h-4"/><circle class="a" cx="2" cy="2" r="2" transform="translate(472.5 1027.5)"/><circle class="a" cx="2" cy="2" r="2" transform="translate(461.5 1027.5)"/></g></svg>
+                    <span class="" id="order-summary-button-title">Hide order summary</span>
+                    <svg id="order-summary-button-arrow" xmlns="http://www.w3.org/2000/svg" width="10.163" height="5.789" viewBox="0 0 10.163 5.789"><defs><style>.a{fill:none;stroke:#000;}</style></defs><path class="a" d="M1216.5,240.488l4.728,4.728,4.728-4.728" transform="translate(-1216.142 -240.135)"/></svg>
+                  </div>
+                  <p class="total-price" >$70.98</p>
+                </div>
+
+                <h1>Spiritual Hippie</h1>
+              </div>
+            </div>
         </div>
     </div>
 

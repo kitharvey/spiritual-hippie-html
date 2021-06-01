@@ -1,6 +1,6 @@
 .left-card {
     box-shadow: 5px 0px 7.5px 0px #00000015;
-    padding-right: 40px;
+    padding-right: 2.5rem;
 
     @media screen and (max-width: 640px) {
       box-shadow: none;
@@ -9,14 +9,17 @@
 
     .guaranteed{
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 1.25px;
     }
   
     h1 {
-      font-weight: 400;
       line-height: 2;
       width: 100%;
-      text-align: center;
+      display: block;
+      margin: 0 auto;
+      @media screen and (max-width: 640px) {
+        display: none;
+      }
     }
   
     .input,
@@ -122,7 +125,7 @@
   
     .title {
       letter-spacing: 0.07px;
-      font-size: 20px;
+      font-size: 1.25rem;
       margin-bottom: 0px;
 
       @media screen and (max-width: 640px) {
@@ -136,7 +139,7 @@
       padding: 10px 0px;
       background: #33b159;
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: bold;
       letter-spacing: 0px;
       color: #fff;
@@ -161,7 +164,7 @@
         text-transform: uppercase;
         text-align: center;
         padding: 10px 0;
-        font-size: 23px;
+        font-size: 1.4375rem;
         letter-spacing: 2.73px;
         background: transparent;
         font-weight: normal;
@@ -176,6 +179,10 @@
           cursor: pointer;
         }
       }
+    }
+
+    .payment-wrapper{
+      display: none;
     }
   
     .payment {
@@ -239,6 +246,16 @@
   
     .creditcard-wrapper {
       margin-top: 10px;
+
+      .header{
+        justify-content: space-between;
+
+        img{
+          height: 38px;
+        }
+      }
+
+
       .cc-input-wrapper {
         background: #f6f6f6;
         padding: 10px;
@@ -264,7 +281,7 @@
     top: 0;
     left: 0;
     background: #000000b3;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 100;
@@ -300,7 +317,7 @@
       }
   
       p {
-        font-size: 29px;
+        font-size: 1.8125rem;
         font-weight: 300;
       }
     }

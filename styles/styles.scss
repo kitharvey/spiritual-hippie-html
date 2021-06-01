@@ -90,13 +90,17 @@ footer {
     align-items: center;
     justify-content: center;
     margin-left: .875rem;
+
+    @media screen and (max-width: 640px) {
+      margin-left: 0rem;
+    }
+    
     a {
       text-align: left;
       font-size: 0.8125rem;
       letter-spacing: 0.04px;
       font-size: .6875rem;
-      padding-left: .875rem;
-      margin-left: .875rem;
+      padding: 0 .875rem;
       border-left: 1px solid #bdbdbd;
 
       &:first-child {
