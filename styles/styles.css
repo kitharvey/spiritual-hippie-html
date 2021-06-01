@@ -444,6 +444,7 @@
 .left-card h1 {
   line-height: 2;
   width: 100%;
+  text-align: center;
   display: block;
   margin: 0 auto;
 }
