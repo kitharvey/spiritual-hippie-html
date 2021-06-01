@@ -4,7 +4,7 @@
   padding-top: 40px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1280px) {
   .left-card,
   .right-card {
     padding-top: 20px;
@@ -17,7 +17,7 @@
   min-height: calc(100vh - 3.5625rem);
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1280px) {
   .main-page {
     flex-direction: column-reverse;
   }
@@ -34,7 +34,7 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1280px) {
   .right-card {
     padding-left: 40px;
     flex-direction: column;
@@ -55,7 +55,7 @@
   margin: 15px 0;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1280px) {
   .right-card .order-summary-button {
     display: none;
   }
@@ -429,7 +429,7 @@
   padding-right: 2.5rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1280px) {
   .left-card {
     box-shadow: none;
     padding-right: 0;
@@ -449,7 +449,7 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1280px) {
   .left-card h1 {
     display: none;
   }
@@ -493,24 +493,24 @@
 }
 
 @media screen and (max-width: 640px) {
-  .left-card .add .input {
+  .left-card .address .input {
     border: 0.5px solid #ced4da;
     border-top: none;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .left-card .add .input:first-child {
+  .left-card .address .input:first-child {
     border-top: 0.5px solid #ced4da;
   }
 }
 
-.left-card .add select {
+.left-card .address select {
   border: 0.5px solid #ced4da;
 }
 
 @media screen and (max-width: 640px) {
-  .left-card .add select {
+  .left-card .address select {
     border: 0.5px solid #ced4da;
     border-top: none;
   }
@@ -836,7 +836,7 @@ footer {
   color: #717171;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   footer {
     flex-direction: column;
   }
@@ -850,7 +850,7 @@ footer .brand {
   margin-bottom: 0px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   footer .brand {
     margin-bottom: 10px;
   }
@@ -863,7 +863,7 @@ footer .footer-menu {
   margin-left: .875rem;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   footer .footer-menu {
     margin-left: 0rem;
   }

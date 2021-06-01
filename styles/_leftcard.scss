@@ -2,7 +2,7 @@
     box-shadow: 5px 0px 7.5px 0px #00000015;
     padding-right: 2.5rem;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1280px) {
       box-shadow: none;
       padding-right: 0;
     }
@@ -18,7 +18,7 @@
       text-align: center;
       display: block;
       margin: 0 auto;
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 1280px) {
         display: none;
       }
     }
@@ -55,7 +55,7 @@
       appearance: none;
     }
 
-    .add{
+    .address{
       .input{
         @media screen and (max-width: 640px) {
           border: 0.5px solid #ced4da;
