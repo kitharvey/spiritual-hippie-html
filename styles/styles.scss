@@ -78,10 +78,10 @@ footer {
   min-height: 3.5625rem;
   width: 100%;
   padding: 10px 0;
-  background: transparent url("/assets/Footer BG.svg") 0% 0% no-repeat padding-box;
+  background:#f6f6f6;
   color: #717171;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 640px) {
     flex-direction: column;
   }
 
@@ -92,7 +92,7 @@ footer {
     text-align: left;
     margin-bottom: 0px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 640px) {
       margin-bottom: 10px;
     }
   }
@@ -103,7 +103,7 @@ footer {
     justify-content: center;
     margin-left: .875rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 640px) {
       margin-left: 0rem;
     }
     

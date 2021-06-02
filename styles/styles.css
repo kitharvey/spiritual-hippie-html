@@ -27,6 +27,14 @@
   padding-left: 0;
   display: flex;
   flex-direction: column-reverse;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 640px) {
+  .right-card {
+    grid-gap: 15px;
+    font-size: 12px;
+  }
 }
 
 .right-card .logo {
@@ -119,11 +127,13 @@
 
 .right-card .total-wrapper .discount .tag img {
   margin-right: 5px;
+  height: 1.5em;
+  width: 1.5em;
 }
 
 .right-card .total-wrapper .total {
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-family: 'Hurme-Geometric-Sans-3-bold';
   letter-spacing: 0px;
   color: #000000;
@@ -133,7 +143,7 @@
 .right-card .total-wrapper .total span {
   font-family: 'Hurme-Geometric-Sans-3';
   text-align: left;
-  font-size: 1.1875rem;
+  font-size: 1.1875em;
   font-weight: normal;
   letter-spacing: 0px;
   color: #000000;
@@ -160,6 +170,8 @@
 
 .right-card .coupon-wrapper .input-wrapper .input {
   background-color: #f6f6f6;
+  font-family: inherit;
+  font-size: 1.25em;
   padding: 10px 16px;
   border: none;
   outline: none;
@@ -171,7 +183,7 @@
   padding: 10px 40px;
   text-align: left;
   font-family: 'Hurme-Geometric-Sans-3-bold';
-  font-size: 1.25rem;
+  font-size: 1.25em;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
@@ -189,23 +201,37 @@
   display: flex;
   align-items: center;
   text-align: left;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   letter-spacing: 0px;
   color: #717171;
   opacity: 1;
+}
+
+@media screen and (max-width: 640px) {
+  .right-card .coupon-wrapper .tag-wrapper {
+    font-size: 1em;
+  }
 }
 
 .right-card .coupon-wrapper .tag-wrapper .button {
   font-size: inherit;
   color: inherit;
   background: none;
-  height: 20px;
-  width: 20px;
+  height: 1.25em;
+  width: 1.25em;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .right-card .coupon-wrapper .tag-wrapper p {
   margin: 0 10px;
+}
+
+.right-card .coupon-wrapper .tag-wrapper img {
+  height: 1.5em;
+  width: 1.5em;
 }
 
 .right-card .product {
@@ -216,14 +242,6 @@
   grid-gap: 2.5em;
   border-bottom: 1px solid #ced4da;
   padding: 2.5em 0;
-  font-size: 16px;
-}
-
-@media screen and (max-width: 640px) {
-  .right-card .product {
-    grid-gap: 15px;
-    font-size: 12px;
-  }
 }
 
 .right-card .product .price-wrapper {
@@ -253,11 +271,12 @@
 
 .right-card .product .price-wrapper .free {
   text-align: left;
-  font-family: 'Hurme-Geometric-Sans-3-bold';
+  font-family: 'Hurme-Geometric-Sans-3-semibold';
   letter-spacing: 0px;
   font-size: 1.25em;
   color: #e8202d;
   opacity: 1;
+  line-height: 1;
 }
 
 .right-card .product .info {
@@ -270,6 +289,7 @@
   text-align: left;
   font-family: 'Hurme-Geometric-Sans-3-semibold';
   letter-spacing: 0px;
+  font-size: 1.25em;
   color: #000000;
   opacity: 1;
 }
@@ -341,12 +361,12 @@
 }
 
 .right-card .advert {
-  border: 0.5px dashed #000000;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23000000' stroke-width='0.5' stroke-dasharray='5%2c 5' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 }
 
 @media screen and (max-width: 1280px) and (min-width: 640px) {
@@ -360,7 +380,18 @@
 .right-card .advert .top {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .right-card .advert .top {
+    padding: 0 20px;
+  }
+  .right-card .advert .top img {
+    width: 90px;
+  }
 }
 
 .right-card .advert .top .details {
@@ -369,17 +400,29 @@
   padding: 0 20px;
 }
 
-.right-card .advert .top .details .name,
+@media screen and (max-width: 1280px) and (min-width: 640px) {
+  .right-card .advert .top .details {
+    padding: 0;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .right-card .advert .top .details {
+    padding: 0;
+    margin-left: 5px;
+  }
+}
+
 .right-card .advert .top .details .price {
   text-align: center;
-  font-family: 'Hurme-Geometric-Sans-3-bold';
-  font-size: 1.25rem;
+  font-family: 'Hurme-Geometric-Sans-3-semibold';
+  font-size: 1.5em;
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
 }
 
-.right-card .advert .top .details .name span,
 .right-card .advert .top .details .price span {
   text-align: left;
   font-family: 'Hurme-Geometric-Sans-3';
@@ -391,6 +434,16 @@
   opacity: 1;
 }
 
+.right-card .advert .top .details .name {
+  text-align: center;
+  font-family: 'Hurme-Geometric-Sans-3-semibold';
+  font-size: 1.25em;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  margin-bottom: 5px;
+}
+
 @media screen and (max-width: 1280px) {
   .right-card .advert .top .details .name {
     font-size: 1rem;
@@ -400,9 +453,9 @@
 .right-card .advert .button {
   background: transparent;
   border: 2px solid #000000;
-  padding: 10px 40px;
+  padding: 10px 50px;
   font-family: 'Hurme-Geometric-Sans-3-semibold';
-  font-size: 1.25rem;
+  font-size: 1.25em;
   text-align: center;
   letter-spacing: 0px;
   cursor: pointer;
@@ -464,7 +517,7 @@
 
 .left-card .guaranteed {
   width: 100%;
-  margin-bottom: 1.25px;
+  margin-bottom: 5px;
 }
 
 .left-card .logo {
@@ -483,7 +536,6 @@
 .left-card select {
   text-align: left;
   font-family: inherit;
-  font-weight: 300;
   padding: 10px 20px;
   letter-spacing: 0.05px;
   color: #717171;
@@ -500,6 +552,14 @@
     margin: 0;
     border-radius: 0px;
   }
+  .left-card .input:first-child,
+  .left-card select:first-child {
+    border-radius: 3px 3px 0 0;
+  }
+  .left-card .input:last-child,
+  .left-card select:last-child {
+    border-radius: 0 0 3px 3px;
+  }
 }
 
 .left-card .input:focus-within,
@@ -509,6 +569,14 @@
   color: #333;
   border: 0.5px solid #717171;
   outline: none;
+}
+
+.left-card label {
+  padding: 10px 20px;
+  letter-spacing: 0.05px;
+  color: #717171;
+  opacity: 1;
+  border: 0.5px solid #ced4da;
 }
 
 .left-card input,
@@ -521,10 +589,17 @@
     border: 0.5px solid #ced4da;
     border-top: none;
   }
+  .left-card .address .input:first-child {
+    border-top: 0.5px solid #ced4da;
+  }
 }
 
 @media screen and (max-width: 640px) {
-  .left-card .address .input:first-child {
+  .left-card .address label {
+    border: 0.5px solid #ced4da;
+    border-top: none;
+  }
+  .left-card .address label:nth-child(2) {
     border-top: 0.5px solid #ced4da;
   }
 }
@@ -604,13 +679,7 @@
 .left-card .title {
   letter-spacing: 0.07px;
   font-size: 1.25rem;
-  margin-bottom: 0px;
-}
-
-@media screen and (max-width: 640px) {
-  .left-card .title {
-    margin-bottom: 10px;
-  }
+  line-height: 1.4;
 }
 
 .left-card .submit-button {
@@ -769,6 +838,10 @@
   justify-content: center;
 }
 
+.left-card .paypal-info p {
+  text-align: center;
+}
+
 .modal-wrapper {
   width: 100%;
   height: 100%;
@@ -900,11 +973,11 @@ footer {
   min-height: 3.5625rem;
   width: 100%;
   padding: 10px 0;
-  background: transparent url("/assets/Footer BG.svg") 0% 0% no-repeat padding-box;
+  background: #f6f6f6;
   color: #717171;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   footer {
     flex-direction: column;
   }
@@ -918,7 +991,7 @@ footer .brand {
   margin-bottom: 0px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   footer .brand {
     margin-bottom: 10px;
   }
@@ -931,7 +1004,7 @@ footer .footer-menu {
   margin-left: .875rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   footer .footer-menu {
     margin-left: 0rem;
   }
