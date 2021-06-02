@@ -5,7 +5,7 @@
   flex-direction: column-reverse;
 
   font-size: 16px;
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 576px) {
     grid-gap: 15px;
     font-size: 12px;
   }
@@ -17,7 +17,7 @@
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     padding-left: 40px;
     flex-direction: column;
 
@@ -35,7 +35,7 @@
     padding: 10px 0;
     cursor: pointer;
     margin: 15px 0;
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1200px) {
       display: none;
     }
     .total-price{
@@ -165,7 +165,7 @@
       align-items: center;
       text-align: left;
       font-size: 1.25em;
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 576px) {
         font-size: 1em;
       }
       letter-spacing: 0px;
@@ -324,7 +324,7 @@
 
     
 
-    @media screen and (max-width: 1280px) and (min-width: 640px) {
+    @media screen and (max-width: 1200px) and (min-width: 576px) {
       padding: 20px 50px;
       width: 400px;
       margin: 0 auto;
@@ -337,7 +337,7 @@
       margin-bottom: 15px;
       padding: 0;
 
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 576px) {
         padding: 0 20px;
 
         img{
@@ -350,13 +350,13 @@
         flex-direction: column;
         padding: 0 20px;
 
-        @media screen and (max-width: 1280px) and (min-width: 640px) {
+        @media screen and (max-width: 1200px) and (min-width: 576px) {
           padding: 0;
           margin-left: 5px;
         }
 
 
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 576px) {
           padding: 0;
           margin-left: 5px;
         }
@@ -390,7 +390,7 @@
           color: #000000;
           opacity: 1;
           margin-bottom: 5px;
-          @media screen and (max-width: 1280px){
+          @media screen and (max-width: 1200px){
             font-size: 1rem;
           }
         }
@@ -409,7 +409,7 @@
       display: flex;
       align-items: center;
 
-      @media screen and (max-width: 1280px){
+      @media screen and (max-width: 1200px){
         font-size: 1rem;
       }
 

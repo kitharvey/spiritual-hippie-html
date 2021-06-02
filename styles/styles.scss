@@ -1,6 +1,6 @@
-@import "page";
-@import "rightcard";
-@import "leftcard";
+@import "./checkout/checkout-page";
+@import "./ocu/ocu-page";
+
 
 *,
 *::after,
@@ -32,6 +32,10 @@
   src: url(/assets/fonts/HurmeGeometricSans3Black.otf);
 }
 @font-face {
+  font-family: 'Hurme-Geometric-Sans-3-light';
+  src: url(/assets/fonts/HurmeGeometricSans3Light.otf);
+}
+@font-face {
   font-family: 'Hurme-Geometric-Sans-3-bold';
   src: url(/assets/fonts/HurmeGeometricSans3Bold.otf);
 }
@@ -53,21 +57,35 @@ a {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 25px;
-  @media screen and (min-width: 640px) {
-    max-width: 640px;
+  // padding: 0 25px;
+  // @media screen and (min-width: 576px) {
+  //   max-width: 576px;
+  // }
+  // @media screen and (min-width: 768px) {
+  //   max-width: 576px;
+  // }
+  // @media screen and (min-width: 1024px) {
+  //   max-width: 768px;
+  // }
+  // @media screen and (min-width: 1280px) {
+  //   max-width: 1280px;
+  // }
+  // @media screen and (min-width: 1536px) {
+  //   max-width: 1536px;
+  // }
+
+  padding: 0 15px;
+  @media screen and (min-width: 576px) {
+    max-width: 540px;
   }
   @media screen and (min-width: 768px) {
-    max-width: 640px;
+    max-width: 720px;
   }
-  @media screen and (min-width: 1024px) {
-    max-width: 768px;
+  @media screen and (min-width: 992px) {
+    max-width: 960px;
   }
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-  }
-  @media screen and (min-width: 1536px) {
-    max-width: 1536px;
+  @media screen and (min-width: 1200px) {
+    max-width: 1140px;
   }
 }
 
@@ -81,7 +99,7 @@ footer {
   background:#f6f6f6;
   color: #717171;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
   }
 
@@ -92,7 +110,7 @@ footer {
     text-align: left;
     margin-bottom: 0px;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 576px) {
       margin-bottom: 10px;
     }
   }
@@ -103,7 +121,7 @@ footer {
     justify-content: center;
     margin-left: .875rem;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 576px) {
       margin-left: 0rem;
     }
     

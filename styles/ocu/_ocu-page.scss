@@ -1,0 +1,166 @@
+
+.ocu-page {
+  min-height: calc(100vh - 3.5625rem);
+
+  .logo{
+    height: 42px;
+    width: auto;
+  }
+
+  .order-wrapper{
+    .order-container{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .front-img{
+            width: 650px;
+        }
+
+        .seleted-order{
+            .price-wrapper{
+                display: flex;
+                align-items: flex-end;
+                .prev-price{
+                    text-align: left;
+                    text-decoration: line-through;
+                    font-size: 3em;
+                    letter-spacing: 0px;
+                    color: #E8202D;
+                    margin-right: 20px;
+                }
+                .only{
+                    letter-spacing: 0px;
+                    margin-right: 10px;
+                    font-size: 3em;
+                }
+                .current-price{
+                    font-size: 4em;
+                    letter-spacing: 0px;
+                    font-family: 'Hurme-Geometric-Sans-3-semibold';
+                }
+            }
+
+            .snh{
+                font-size: 1.5em;
+                letter-spacing: 2.34px;
+                padding: 15px 0;
+                border-bottom: 1px solid #D6D6D6;
+                text-align: center;
+                span{
+                    font-family: 'Hurme-Geometric-Sans-3-semibold';
+                    font-size: 1.5em;
+                }
+            }
+            .dnq{
+                font-size: 1.5em;
+                text-align: center;
+                padding: 15px 0;
+            }
+            .details{
+                border: 0.5px solid #C4C4C4;
+                padding: 10px 20px;
+                display: flex;
+                height: 45px;
+                p{
+                    margin-right: 10px;
+                    font-size: 1em;
+                    letter-spacing: 0px;
+                    color: #333333;
+                }
+            }
+            .number-wrapper{
+                display: grid;
+                margin-top: 10px;
+                grid-template-columns: repeat(3, 1fr);
+                border: 0.5px solid #C4C4C4;
+                height: 45px;
+
+                input{
+                    border: none;
+                    outline: none;
+                    border-right: 0.5px solid #C4C4C4;
+                    border-left: 0.5px solid #C4C4C4;
+                    appearance: none;
+                    font-family: inherit;
+                    text-align: center;
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                input[type=number] {
+                    -moz-appearance:textfield;
+                }
+
+                .incre,
+                .decre{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.25em;
+                }
+            }
+
+            .purchase{
+                margin-top: 10px;
+                background: #33B159;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+                font-size: 1.25em;
+                font-family: 'Hurme-Geometric-Sans-3-semibold';
+                text-align: center;
+                padding: 22px 0;
+            }
+
+            .decline{
+                margin-top: 10px;
+                background: #333333;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                font-size: 1.25em;
+                text-align: center;
+                padding: 22px 0;
+                font-size: 1em;
+                font-family: 'Hurme-Geometric-Sans-3-light';
+            }
+
+        }
+    }
+  }
+
+
+
+  .header-title{
+    .title{
+        font-size: 2.25em;
+        letter-spacing: 0.42px;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #C4C4C4;
+    }
+    .small-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        p{
+            color: #717171;
+            font-family: 'Hurme-Geometric-Sans-3-light';
+            font-size: 1.8em;
+            font-weight: 300;
+            letter-spacing: 1.8px;
+            
+        }
+        svg{
+            height: 26px;
+            width: 26px;
+            margin-right: 1.875em;
+        }
+    }
+  }
+}
