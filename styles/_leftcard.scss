@@ -12,10 +12,8 @@
         margin-bottom: 1.25px;
     }
   
-    h1 {
-      line-height: 2;
-      width: 100%;
-      text-align: center;
+    .logo {
+      height: 60px;
       display: block;
       margin: 0 auto;
       @media screen and (max-width: 1280px) {
@@ -79,6 +77,18 @@
         }
       }
 
+    }
+
+    .business-address-wrapper{
+      .input{
+        margin-bottom: 0;
+      }
+      .input-wrapper{
+        margin-top: 0;
+      }
+      .address{
+        display: none;
+      }
     }
   
     .select {
@@ -254,23 +264,37 @@
           height: 38px;
         }
       }
+    }
+    .payment-input-wrapper {
+      background: #fafafa;
+      padding: 10px;
+      .input{
+        margin: 5px 0;
+      }
 
+      img{
+        max-width: 155px;
+        margin-bottom: 15px;
+      }
 
-      .cc-input-wrapper {
-        background: #f6f6f6;
-        padding: 10px;
+      p{
+        color: #545454;
+        font-size: 0.875rem;
+      }
 
-        .input{
-          margin: 5px 0;
-        }
-
-        .grid-3 {   
-          @media screen and (max-width: 640px) {
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 10px;
-          }
+      .grid-3 {   
+        @media screen and (max-width: 640px) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 10px;
         }
       }
+    }
+
+    .paypal-info{
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
   

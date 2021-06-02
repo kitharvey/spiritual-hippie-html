@@ -9,6 +9,13 @@ const orderSummaryBTN = document.getElementById('order-summary-button')
 const orderWrapperDOM = document.getElementById('order-wrapper')
 const orderSummaryBTNTITLE = document.getElementById('order-summary-button-title')
 const orderSummaryBTNARROW = document.getElementById('order-summary-button-arrow')
+const differentAddressBTN = document.getElementById('different-address')
+const sameAddressBTN = document.getElementById('same-address')
+const differentAddressFORM = document.getElementById('different-address-form')
+const paymentCCBTN = document.getElementById('creditcard-button')
+const paymentPPBTN = document.getElementById('paypal-button')
+const paymentCCFORM = document.getElementById('payment-cc-input')
+const paymentPPFORM = document.getElementById('payment-pp-info')
 const closeModalBTN = document.querySelectorAll('#close-modal')
 
 
@@ -42,6 +49,32 @@ const onLoad = () => {
         }
         
     }
+
+    function selectBillingAddress(){
+        if(differentAddressBTN.checked) {
+            differentAddressFORM.style.display = 'block'
+        }
+        else{
+            differentAddressFORM.style.display = 'none'
+        }
+    }
+
+    function selectPayment(){
+        if(paymentCCBTN.checked){
+            paymentCCFORM.style.display = 'block'
+            paymentPPFORM.style.display = 'none'
+        }
+        if(paymentPPBTN.checked){
+            paymentCCFORM.style.display = 'none'
+            paymentPPFORM.style.display = 'flex'
+        }
+    }
+
+    differentAddressBTN.onclick = selectBillingAddress
+    sameAddressBTN.onclick = selectBillingAddress
+    paymentCCBTN.onclick = selectPayment
+    paymentPPBTN.onclick = selectPayment
+    
 
     paymentBTN.addEventListener('click', onclickPaymentBTN)
     shippingBTN.addEventListener('click', onclickShippingBTN)

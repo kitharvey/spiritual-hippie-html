@@ -5,7 +5,8 @@
   flex-direction: column-reverse;
 
 
-  h1{
+  .logo{
+    height: 60px;
     display: block;
     margin: 0 auto;
   }
@@ -14,7 +15,7 @@
     padding-left: 40px;
     flex-direction: column;
 
-    h1{
+    .logo{
       display: none;
     }
   }
@@ -79,6 +80,11 @@
 
       .tag{
         color: #717171;
+        display: flex;
+        align-items: center;
+        img{
+          margin-right: 5px;
+        }
       }
     }
 

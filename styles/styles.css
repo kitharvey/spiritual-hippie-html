@@ -29,7 +29,8 @@
   flex-direction: column-reverse;
 }
 
-.right-card h1 {
+.right-card .logo {
+  height: 60px;
   display: block;
   margin: 0 auto;
 }
@@ -39,7 +40,7 @@
     padding-left: 40px;
     flex-direction: column;
   }
-  .right-card h1 {
+  .right-card .logo {
     display: none;
   }
 }
@@ -112,6 +113,12 @@
 
 .right-card .total-wrapper .discount .tag {
   color: #717171;
+  display: flex;
+  align-items: center;
+}
+
+.right-card .total-wrapper .discount .tag img {
+  margin-right: 5px;
 }
 
 .right-card .total-wrapper .total {
@@ -460,16 +467,14 @@
   margin-bottom: 1.25px;
 }
 
-.left-card h1 {
-  line-height: 2;
-  width: 100%;
-  text-align: center;
+.left-card .logo {
+  height: 60px;
   display: block;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 1280px) {
-  .left-card h1 {
+  .left-card .logo {
     display: none;
   }
 }
@@ -533,6 +538,18 @@
     border: 0.5px solid #ced4da;
     border-top: none;
   }
+}
+
+.left-card .business-address-wrapper .input {
+  margin-bottom: 0;
+}
+
+.left-card .business-address-wrapper .input-wrapper {
+  margin-top: 0;
+}
+
+.left-card .business-address-wrapper .address {
+  display: none;
 }
 
 .left-card .select {
@@ -719,20 +736,37 @@
   height: 38px;
 }
 
-.left-card .creditcard-wrapper .cc-input-wrapper {
-  background: #f6f6f6;
+.left-card .payment-input-wrapper {
+  background: #fafafa;
   padding: 10px;
 }
 
-.left-card .creditcard-wrapper .cc-input-wrapper .input {
+.left-card .payment-input-wrapper .input {
   margin: 5px 0;
 }
 
+.left-card .payment-input-wrapper img {
+  max-width: 155px;
+  margin-bottom: 15px;
+}
+
+.left-card .payment-input-wrapper p {
+  color: #545454;
+  font-size: 0.875rem;
+}
+
 @media screen and (max-width: 640px) {
-  .left-card .creditcard-wrapper .cc-input-wrapper .grid-3 {
+  .left-card .payment-input-wrapper .grid-3 {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
   }
+}
+
+.left-card .paypal-info {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-wrapper {
