@@ -47,9 +47,9 @@ const onLoad = () => {
     shippingBTN.addEventListener('click', onclickShippingBTN)
     continuePaymentBTN.addEventListener('click', onclickPaymentBTN)
     orderSummaryBTN.addEventListener('click', onClickOrderSummary)
-    completeOrderBTN.addEventListener('click', () => modalDOM.style.display = 'flex')
-    closeModalBTN[0].addEventListener('click', () => modalDOM.style.display = 'none')
-    closeModalBTN[1].addEventListener('click', () => modalDOM.style.display = 'none')
+    completeOrderBTN.addEventListener('click', () => modalDOM.style.visibility = 'visible')
+    closeModalBTN[0].addEventListener('click', () => modalDOM.style.visibility = 'hidden')
+    closeModalBTN[1].addEventListener('click', () => modalDOM.style.visibility = 'hidden')
 }
 
 
