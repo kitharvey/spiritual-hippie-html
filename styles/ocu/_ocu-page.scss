@@ -1,26 +1,69 @@
 
 .ocu-page {
-  min-height: calc(100vh - 3.5625rem);
+    padding-top: 10px;
+    padding-bottom: 40px;
 
   .logo{
     height: 42px;
     width: auto;
+    display: block;
+
+    @media screen and (max-width: 1200px) {
+        height: 30px;
+        margin: 0 auto;
+      }
   }
 
-  .order-wrapper{
-    .order-container{
+
+    .order-wrapper{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        margin-top: 10px;
+        @media screen and (max-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+          }
 
-        .front-img{
-            width: 650px;
+
+        .items-wrapper{
+            .front-img{
+                width: 650px;
+                @media screen and (max-width: 1200px) {
+                    width: 100%;
+                }
+            }
+
+            .menu-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .img-button{
+                    width: 30%;
+                    cursor: pointer;
+                    input[type="radio"]{
+                        display: none;
+                        &:checked + img{
+                            outline: 3px solid #717171;
+                        }
+                    }
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
         }
 
         .seleted-order{
+            width: 100%;
+            @media screen and (max-width: 1200px) {
+                margin-top: 20px;
+            }
             .price-wrapper{
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
+                justify-content: center;
                 .prev-price{
                     text-align: left;
                     text-decoration: line-through;
@@ -28,16 +71,27 @@
                     letter-spacing: 0px;
                     color: #E8202D;
                     margin-right: 20px;
+
+                    @media screen and (max-width: 1200px) {
+                        font-size: 1.8125em;
+                    }
                 }
                 .only{
                     letter-spacing: 0px;
                     margin-right: 10px;
                     font-size: 3em;
+                    @media screen and (max-width: 1200px) {
+                        font-size: 1.8125em;
+                    }
                 }
                 .current-price{
                     font-size: 4em;
                     letter-spacing: 0px;
                     font-family: 'Hurme-Geometric-Sans-3-semibold';
+
+                    @media screen and (max-width: 1200px) {
+                        font-size: 2.6875em;
+                    }
                 }
             }
 
@@ -47,34 +101,61 @@
                 padding: 15px 0;
                 border-bottom: 1px solid #D6D6D6;
                 text-align: center;
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 1.25em;
+                    padding: 0;
+                    padding-bottom: 10px;
+                }
+
                 span{
                     font-family: 'Hurme-Geometric-Sans-3-semibold';
-                    font-size: 1.5em;
                 }
             }
             .dnq{
                 font-size: 1.5em;
                 text-align: center;
                 padding: 15px 0;
+                @media screen and (max-width: 1200px) {
+                    font-size: 1em;
+                    padding: 10px 0;
+                }
             }
             .details{
                 border: 0.5px solid #C4C4C4;
                 padding: 10px 20px;
                 display: flex;
                 height: 45px;
+
+                @media screen and (max-width: 1200px) {
+                    height: 35px;
+                }
                 p{
                     margin-right: 10px;
                     font-size: 1em;
                     letter-spacing: 0px;
                     color: #333333;
+
+                    @media screen and (max-width: 1200px) {
+                        font-size: 0.8125em;
+                    }
+                    
                 }
             }
             .number-wrapper{
-                display: grid;
+                width: 100%;
                 margin-top: 10px;
+                display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 border: 0.5px solid #C4C4C4;
                 height: 45px;
+                font-size: 1.25em;
+                color: #333333;
+
+                @media screen and (max-width: 1200px) {
+                    height: 35px;
+                    font-size: 1em;
+                }
 
                 input{
                     border: none;
@@ -83,7 +164,10 @@
                     border-left: 0.5px solid #C4C4C4;
                     appearance: none;
                     font-family: inherit;
+                    font-size: inherit;
                     text-align: center;
+                    color: inherit;
+                    width: auto;
                 }
 
                 input::-webkit-outer-spin-button,
@@ -101,7 +185,8 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 1.25em;
+                    width: 100%;
+                    user-select: none;
                 }
             }
 
@@ -115,6 +200,10 @@
                 font-family: 'Hurme-Geometric-Sans-3-semibold';
                 text-align: center;
                 padding: 22px 0;
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 1em;
+                }
             }
 
             .decline{
@@ -122,11 +211,14 @@
                 background: #333333;
                 letter-spacing: 0px;
                 color: #FFFFFF;
-                font-size: 1.25em;
+                font-size: .9em;
                 text-align: center;
                 padding: 22px 0;
-                font-size: 1em;
                 font-family: 'Hurme-Geometric-Sans-3-light';
+
+                @media screen and (max-width: 1200px) {
+                    font-size: .75em;
+                }
             }
 
         }
@@ -142,25 +234,41 @@
         text-align: center;
         padding: 15px 0;
         border-bottom: 1px solid #C4C4C4;
+
+
+        @media screen and (max-width: 1200px) {
+            font-size: 1.3125em;
+            padding: 0;
+            padding-bottom: 10px;
+        }
+
     }
     .small-title{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin: 20px 0;
-        p{
-            color: #717171;
-            font-family: 'Hurme-Geometric-Sans-3-light';
-            font-size: 1.8em;
-            font-weight: 300;
-            letter-spacing: 1.8px;
-            
+        color: #717171;
+        font-family: 'Hurme-Geometric-Sans-3-light';
+        font-size: 1.8em;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 1.8px;
+
+        @media screen and (max-width: 1200px) {
+            font-size: 0.875em;
         }
-        svg{
-            height: 26px;
-            width: 26px;
-            margin-right: 1.875em;
+
+        span{
+            margin-right: 20px;
+            svg{
+                height: 36px;
+                width: 36px;
+            }
+            @media screen and (max-width: 1200px) {
+                svg{
+                    height: 14px;
+                    width: 14px;
+                }
+                margin-right: 5px;
+            }
         }
     }
-  }
 }

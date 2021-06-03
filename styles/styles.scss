@@ -49,12 +49,18 @@ body {
 
   .main-page{
     position: relative;
+    min-height: 100vh;
+    padding-bottom: 3.5625rem;
   }
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+
+div[role="button"]{
   cursor: pointer;
 }
 
