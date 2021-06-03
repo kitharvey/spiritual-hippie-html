@@ -3,16 +3,14 @@
 
   display: flex;
   flex-direction: column-reverse;
-
   font-size: 16px;
-  @media screen and (max-width: 576px) {
-    grid-gap: 15px;
+  @media screen and (max-width: 1200px) {
     font-size: 12px;
   }
 
 
   .logo{
-    height: 60px;
+    height: 30px;
     display: block;
     margin: 0 auto;
   }
@@ -34,21 +32,23 @@
     justify-content: space-between;
     padding: 10px 0;
     cursor: pointer;
-    margin: 15px 0;
+    margin-top: 15px;
+
     @media screen and (min-width: 1200px) {
       display: none;
     }
+
     .total-price{
       font-family: 'Hurme-Geometric-Sans-3-bold';
+      font-size: 1rem;
     }
     .order-title{
       display: flex;
       align-items: center;
-
       span{
         margin: 0 15px;
+        font-size: 1rem;
       }
-
       #order-summary-button-arrow{
         transform: rotate(180deg);
       }
@@ -103,16 +103,29 @@
       letter-spacing: 0px;
       color: #000000;
       opacity: 1;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 16px;
+      }
+
       span {
         font-family: 'Hurme-Geometric-Sans-3';
         text-align: left;
-        font-size: 1.1875em;
+        font-size: 19px;
+        @media screen and (max-width: 1200px) {
+          font-size: 12px;
+        }
         font-weight: normal;
         letter-spacing: 0px;
         color: #000000;
         opacity: 1;
         margin-right: 5px;
       }
+      
     }
 
     .flex-row {
@@ -197,9 +210,14 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
     justify-items: start;
-    grid-gap: 2.5em ;
+    grid-gap: 2em;
     border-bottom: 1px solid #ced4da;
     padding: 2.5em 0;
+
+    @media screen and (max-width: 1200px) {
+      padding: 2em 0;
+      grid-gap: 1.25em;
+    }
 
     .price-wrapper {
       display: flex;
@@ -249,21 +267,24 @@
         opacity: 1;
       }
       .description {
-        text-align: center;
+        text-align: left;
+        font-family: 'Hurme-Geometric-Sans-3';
         font-size: 0.875em;
         letter-spacing: 0px;
         color: #333333;
         opacity: 1;
-        line-height: 1.5;
+        line-height: 1.2;
       }
       .details {
         display: flex;
-        margin-top: 5px;
+        flex-wrap: wrap;
+        margin-top: 0.3125em;
+        font-family: 'Hurme-Geometric-Sans-3';
         p {
-          padding-right: 5px;
-          margin-right: 5px;
+          padding-right: 0.3125em;
+          margin-right: 0.3125em;
           border-right: 1px solid #d6d6d6;
-          line-height: 0.8;
+          line-height: 1.2;
           text-align: left;
           font-size: 0.875em;
           letter-spacing: 0px;
@@ -282,13 +303,17 @@
     .img-wrapper {
       box-shadow: 1px 2px 10px #00000029;
       border-radius: 5px;
-      width: 9.8125em;
-      height: 5.1875em;
       position: relative;
+      height: max-content;
+      width: max-content;
+
 
       img{
-        width: 100%;
-        height: 100%;
+        height: 83px;
+
+        @media screen and (max-width: 1200px) {
+          height: 53px;
+        }
       }
 
       .qnty {
@@ -315,12 +340,12 @@
   }
 
   .advert {
-    padding: 20px;
+    padding: 20px 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23000000' stroke-width='0.5' stroke-dasharray='5%2c 5' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border: 0.5px dashed #000000;
 
     
 
@@ -335,11 +360,8 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 15px;
-      padding: 0;
-
       @media screen and (max-width: 576px) {
-        padding: 0 20px;
-
+        padding: 0 10px;
         img{
           width: 90px;
         }
@@ -365,10 +387,13 @@
         .price {
           text-align: center;
           font-family: 'Hurme-Geometric-Sans-3-semibold';
-          font-size: 1.5em;
+          font-size: 1.5rem;
           letter-spacing: 0px;
           color: #000000;
           opacity: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           span {
             text-align: left;
@@ -379,12 +404,13 @@
             letter-spacing: 0px;
             color: #e8202d;
             opacity: 1;
+            margin-right: 5px;
           }
         }
 
         .name{
           text-align: center;
-          font-family: 'Hurme-Geometric-Sans-3-semibold';
+          font-family: 'Hurme-Geometric-Sans-3-bold';
           font-size: 1.25em;
           letter-spacing: 0px;
           color: #000000;
@@ -400,7 +426,7 @@
     .button {
       background: transparent;
       border: 2px solid #000000;
-      padding: 10px 50px;
+      padding: 10px 0;
       font-family: 'Hurme-Geometric-Sans-3-semibold';
       font-size: 1.25em;
       text-align: center;
@@ -408,9 +434,12 @@
       cursor: pointer;
       display: flex;
       align-items: center;
+      justify-content: center;
+      width: 100%;
 
       @media screen and (max-width: 1200px){
         font-size: 1rem;
+        padding: 7.5px 0;
       }
 
       span{

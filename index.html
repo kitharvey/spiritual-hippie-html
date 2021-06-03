@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-
+  <main class="main-page" >
     <div class="container">
         <div class="checkout-page">
 
@@ -34,36 +34,33 @@
                     <span>Payment</span>
                   </div>
                 </div>     
-
-
                 <div class="shipping-wrapper" id="shipping-dom">
                     <div class="input-wrapper">
                       <p class="title">Contact Information</p>
-                      <input class="input" type="email" placeholder="Email" />
+                      <div class="mt-10">
+                        <input class="input" type="email" placeholder="Email" />
+                      </div>
                     </div>
                     <div class="input-wrapper address">
                       <p class="title">Shipping Address</p>
-                      <div class="grid-2">
-                        <input class="input" type="text" placeholder="First name" />
-                        <input class="input" type="text" placeholder="Last name" />
-                      </div>
-                      <input class="input" type="text" placeholder="Address" />
-                      <input class="input" type="text" placeholder="City" />
-                      <div class="grid-3">
-                        <div class="select">
+                      <div class="mt-10">
+                        <div class="grid-2">
+                          <input class="input" type="text" placeholder="First name" />
+                          <input class="input" type="text" placeholder="Last name" />
+                        </div>
+                        <input class="input" type="text" placeholder="Address" />
+                        <input class="input" type="text" placeholder="City" />
+                        <div class="grid-3">
                           <select>
                             <option>Select Country</option>
                           </select>
-                        </div>
-                        <div class="select">
                           <select>
                             <option>Province</option>
                           </select>
+                          <input class="input" type="text" placeholder="Postal Code" />
                         </div>
-              
-                        <input class="input" type="text" placeholder="Postal Code" />
+                        <input class="input button-border" type="tel" placeholder="Phone number (optional)" />
                       </div>
-                      <input class="input button-border" type="tel" placeholder="Phone number (optional)" />
                     </div>
                     <div
                       role="button"
@@ -80,52 +77,48 @@
                   <div class="payment-wrapper" id="payment-dom">
                     <div class="input-wrapper">
                       <p class="title">Shipping method</p>
-                      <label class="header">
-                        <input type="radio" id="secured-shipping" value="secured-shipping" name="ship-method" />
-                        <span>Secured Shipping</span>
-                      </label>
+                      <div class="mt-10" >
+                        <label class="header">
+                          <input type="radio" id="secured-shipping" value="secured-shipping" name="ship-method" />
+                          <span>Secured Shipping</span>
+                        </label>
+                      </div>
                     </div>
                     <div class="input-wrapper address">
                       <p class="title">Billing address</p>
-                      <label class="header">
-                        <input type="radio" id="same-address" value="same-address" name="ship-add" />
-                        <span>Same as shipping address</span>
-                      </label>
-                      <div class="business-address-wrapper">
+                      <div class="mt-10" >
                         <label class="header">
-                          <input type="radio" id="different-address" value="different-address" name="ship-add"/>
-                          <span>Use a different billing address</span>
+                          <input type="radio" id="same-address" value="same-address" name="ship-add" />
+                          <span>Same as shipping address</span>
                         </label>
-                        <div class="input-wrapper address" id="different-address-form">
-                          <div class="grid-2">
-                            <input class="input" type="text" placeholder="First name" />
-                            <input class="input" type="text" placeholder="Last name" />
-                          </div>
-                          <input class="input" type="text" placeholder="Address" />
-                          <input class="input" type="text" placeholder="City" />
-                          <div class="grid-3">
-                            <div class="select">
+                          <label class="header">
+                            <input type="radio" id="different-address" value="different-address" name="ship-add"/>
+                            <span>Use a different billing address</span>
+                          </label>
+                          <div class="input-wrapper address" id="different-address-form">
+                            <div class="grid-2">
+                              <input class="input" type="text" placeholder="First name" />
+                              <input class="input" type="text" placeholder="Last name" />
+                            </div>
+                            <input class="input" type="text" placeholder="Address" />
+                            <input class="input" type="text" placeholder="City" />
+                            <div class="grid-3">
                               <select>
                                 <option>Select Country</option>
                               </select>
-                            </div>
-                            <div class="select">
                               <select>
                                 <option>Province</option>
                               </select>
+                              <input class="input" type="text" placeholder="Postal Code" />
                             </div>
-                  
-                            <input class="input" type="text" placeholder="Postal Code" />
+                            <input class="input button-border" type="tel" placeholder="Phone number (optional)" />
                           </div>
-                          <input class="input button-border" type="tel" placeholder="Phone number (optional)" />
-                        </div>
                       </div>
-
                     </div>
                     <div class="input-wrapper payment">
                       <p class="title">Payment</p>
                       <small>All transactions are secured and encrypted</small>
-                      <div class="creditcard-wrapper">
+                      <div class="creditcard-wrapper mt-10">
                         <label class="header">
                           <input
                             class="input"
@@ -211,9 +204,9 @@
                       />
                       <div class="details">
                         <p class="name">Vibe With These Face Shields!</p>
-                        <p class="price">
+                        <div class="price">
                           <span>$24.99</span> $6.95
-                        </p>
+                        </div>
                       </div>
                     </div>
                     <label class="button" role="button" tabIndex="6" aria-hidden="true">
@@ -414,6 +407,7 @@
           </a>
         </div>
       </footer>
+  </main>
 </body>
 <script src="script.js" ></script>
 </html>

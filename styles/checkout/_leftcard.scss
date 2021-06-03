@@ -25,7 +25,7 @@
     select {
       text-align: left;
       font-family: inherit;
-      padding: 10px 20px;
+      padding: 0 10px;
       letter-spacing: 0.05px;
       color: #717171;
       opacity: 1;
@@ -33,6 +33,9 @@
       border-radius: 3px;
       width: 100%;
       margin: 5px 0;
+      font-size: 16px;
+      height: 45px;
+      font-family: 'Hurme-Geometric-Sans-3-light';
 
       @media screen and (max-width: 576px) {
         margin: 0;
@@ -78,17 +81,6 @@
         }
       }
 
-      label{
-        @media screen and (max-width: 576px) {
-          border: 0.5px solid #ced4da;
-          border-top: none;
-
-            &:nth-child(2){
-                border-top: 0.5px solid #ced4da;
-            }
-        }
-      }
-
       select{
         border: 0.5px solid #ced4da;
         @media screen and (max-width: 576px) {
@@ -99,7 +91,8 @@
 
     }
 
-    .business-address-wrapper{
+    #different-address-form{
+      display: none;
       .input{
         margin-bottom: 0;
       }
@@ -111,22 +104,11 @@
       }
     }
   
-    .select {
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        z-index: 1;
-        transform: translateY(-50%);
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 5px solid #717171;
-        pointer-events: none;
-      }
+    select {
+      background-image: url(/assets/caret.png);
+      background-size: 20px 20px, 5px 5px, 1px 1.5em;
+      background-repeat: no-repeat;
+      background-position: calc(100% - 10px) center;
     }
   
     .input-wrapper {
@@ -136,7 +118,7 @@
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px;
+      grid-gap: 15px;
 
       @media screen and (max-width: 576px) {
         grid-template-columns: 1fr;
@@ -146,7 +128,7 @@
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 20px;
+      grid-gap: 15px;
 
       @media screen and (max-width: 576px) {
         grid-template-columns: 1fr;
@@ -157,13 +139,15 @@
     .title {
       letter-spacing: 0.07px;
       font-size: 1.25rem;
-      line-height: 1.4;
+    }
+
+    small{
+      font-size: 12px;
     }
   
     .submit-button {
       display: block;
-      width: 350px;
-      padding: 1rem;
+      padding: 1rem 4.6875rem;
       background: #33b159;
       text-transform: uppercase;
       font-size: 1.25rem;
@@ -175,10 +159,17 @@
       margin-right: 0;
       text-align: center;
       cursor: pointer;
+      width: max-content;
 
       @media screen and (max-width: 576px) {
         margin-left: auto;
         margin-right: auto;
+        padding: 1rem;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 18px;
       }
     }
   
@@ -195,6 +186,10 @@
         background: transparent;
         font-weight: normal;
         width: 50%;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 18px;
+        }
   
         &.active {
           box-shadow: 0px 3px 9px #33333333;
@@ -209,11 +204,24 @@
 
     .payment-wrapper{
       display: none;
+
+      label{
+        @media screen and (max-width: 576px) {
+          border: 0.5px solid #ced4da;
+          border-top: none;
+
+            &:first-child{
+                border-top: 0.5px solid #ced4da;
+            }
+        }
+      }
     }
   
     .payment {
       .header {
         margin: 0;
+
+        margin-top: 10px;
       }
       .input {
         background: #fff;
@@ -225,6 +233,11 @@
       align-items: center;
       cursor: pointer;
       position: relative;
+      margin: 5px 0;
+
+      @media screen and (max-width: 576px) {
+        margin: 0;
+      }
   
       input[type="radio"] {
         cursor: pointer;
@@ -278,6 +291,9 @@
 
         img{
           height: 38px;
+          @media screen and (max-width: 1200px) {
+            height: 24px;
+          }
         }
       }
     }
@@ -285,7 +301,13 @@
       background: #fafafa;
       padding: 10px;
       .input{
-        margin: 5px 0;
+        margin-bottom: 5px;
+        height: 35px;
+        border-radius: 3px;
+        @media screen and (max-width: 1200px) {
+          font-size: 0.75rem;
+          padding: 10px;
+        }
       }
 
       img{
@@ -301,7 +323,12 @@
       .grid-3 {   
         @media screen and (max-width: 576px) {
           grid-template-columns: repeat(3, 1fr);
-          grid-gap: 10px;
+          grid-gap: .5rem;
+        }
+
+        @media screen and (max-width: 390px) {
+          grid-template-columns: 1fr;
+          grid-gap: 0;
         }
       }
     }

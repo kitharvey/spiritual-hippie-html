@@ -46,6 +46,10 @@
 
 body {
   font-family: 'Hurme-Geometric-Sans-3';
+
+  .main-page{
+    position: relative;
+  }
 }
 
 a {
@@ -74,7 +78,7 @@ a {
   //   max-width: 1536px;
   // }
 
-  padding: 0 15px;
+  padding: 0 30px;
   @media screen and (min-width: 576px) {
     max-width: 540px;
   }
@@ -98,6 +102,8 @@ footer {
   padding: 10px 0;
   background:#f6f6f6;
   color: #717171;
+  position: absolute;
+  bottom: 0;
 
   @media screen and (max-width: 576px) {
     flex-direction: column;
@@ -137,5 +143,11 @@ footer {
         border-left: none;
       }
     }
+  }
+}
+
+.mt-10{
+  @media screen and (max-width: 576px) {
+  margin-top: 10px;
   }
 }
