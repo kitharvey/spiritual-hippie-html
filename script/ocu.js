@@ -9,7 +9,7 @@ const menuWrapper = document.querySelector('.menu-wrapper')
 
 const itemsArray = [
     {
-        src: "/assets/ocu/FacemasksPeacePattern2x.png",
+        src: "/assets/ocu/mainmask1@2x.png",
         detail: "Peace Pattern"
     },
     {
@@ -22,7 +22,7 @@ const itemsArray = [
     },
 ]
 
-
+thumbnailBTN[0].checked = true
 
 const onLoad = () => {
 
