@@ -48,9 +48,24 @@ body {
   font-family: 'Hurme-Geometric-Sans-3';
 
   .main-page{
-    position: relative;
     min-height: 100vh;
     padding-bottom: 3.5625rem;
+    
+    position: relative;
+    &::before{
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+      box-shadow: 5px 0px 7.5px 0px #00000015;
+      padding-right: 2.5rem;
+  
+      @media screen and (max-width: 1200px) {
+        box-shadow: none;
+        padding-right: 0;
+      }
+    }
   }
 }
 
@@ -67,6 +82,7 @@ div[role="button"]{
 .container {
   width: 100%;
   margin: 0 auto;
+  height: 100%;
   // padding: 0 25px;
   // @media screen and (min-width: 576px) {
   //   max-width: 576px;
