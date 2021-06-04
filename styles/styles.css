@@ -35,7 +35,7 @@
   justify-content: space-between;
   padding: 10px 0;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 19px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -198,11 +198,19 @@
 .right-card .coupon-wrapper {
   display: flex;
   flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+  .right-card .coupon-wrapper {
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
 }
 
 .right-card .coupon-wrapper .input-wrapper {
   display: flex;
-  margin-top: 20px;
 }
 
 .right-card .coupon-wrapper .input-wrapper .input {
@@ -366,20 +374,34 @@
   text-align: left;
   font-family: 'Hurme-Geometric-Sans-3-semibold';
   letter-spacing: 0px;
-  font-size: 1em;
+  font-size: 16px;
   color: #000000;
   opacity: 1;
   line-height: 1.2;
+  padding: 2px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .right-card .product .info .name {
+    font-size: 14px;
+  }
 }
 
 .right-card .product .info .description {
   text-align: left;
   font-family: 'Hurme-Geometric-Sans-3';
-  font-size: 0.875em;
+  font-size: 14px;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
   line-height: 1.2;
+  padding: 2px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .right-card .product .info .description {
+    font-size: 10px;
+  }
 }
 
 .right-card .product .info .details {
@@ -387,15 +409,16 @@
   flex-wrap: wrap;
   font-family: 'Hurme-Geometric-Sans-3';
   line-height: 1.2;
+  padding: 2px 0;
 }
 
 .right-card .product .info .details p {
-  padding-right: 0.3125em;
-  margin-right: 0.3125em;
+  padding-right: 8px;
+  margin-right: 8px;
   border-right: 1px solid #d6d6d6;
   line-height: 1.2;
   text-align: left;
-  font-size: 0.875em;
+  font-size: 14px;
   letter-spacing: 0px;
   color: #333333;
   opacity: 1;
@@ -405,6 +428,12 @@
   padding-right: 0;
   margin-right: 0;
   border-right: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .right-card .product .info .details p {
+    font-size: 10px;
+  }
 }
 
 .right-card .product .img-wrapper {
@@ -477,13 +506,7 @@
 
 @media screen and (max-width: 576px) {
   .right-card .advert {
-    margin: 15px 2px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .right-card .advert {
-    margin: 15px 2px;
+    margin: 15px 0;
   }
 }
 
@@ -626,7 +649,7 @@
 
 .left-card .guaranteed {
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 .left-card .logo {
