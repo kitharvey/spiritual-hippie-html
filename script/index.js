@@ -57,7 +57,7 @@ const productData = [
       isFree: false,
     },
     {
-      img: "/assets/SafeGuard.png",
+      img: "/assets/safeGuard.png",
       name: "Safeguard - Shipping Guarantee",
       description: "Safeguard shipping guarantee",
       details: [".98"],
@@ -172,7 +172,7 @@ const onLoad = () => {
             safeguard.className = "product" 
             safeguard.id = "Safeguard"
             safeguard.innerHTML = `<div class="img-wrapper">
-                                <img src="/assets/SafeGuard.png" alt="Safeguard - Shipping Guarantee" />
+                                <img src="/assets/safeGuard.png" alt="Safeguard - Shipping Guarantee" />
                                 <span class="qnty">1</span>
                             </div>
                         
