@@ -1182,13 +1182,13 @@
   display: grid;
   grid-template-columns: 596px 1fr;
   grid-gap: 48px;
-  flex: content;
   margin-top: 15px;
 }
 
 @media screen and (max-width: 1200px) {
   .ocu-page .order-wrapper {
     grid-template-columns: 1fr;
+    grid-gap: 18px;
   }
 }
 
@@ -1236,12 +1236,6 @@
 
 .ocu-page .order-wrapper .items-wrapper .menu-wrapper .img-button img {
   width: 100%;
-}
-
-@media screen and (max-width: 1200px) {
-  .ocu-page .order-wrapper .seleted-order {
-    margin-top: 20px;
-  }
 }
 
 .ocu-page .order-wrapper .seleted-order .price-wrapper {
@@ -1305,7 +1299,7 @@
 .ocu-page .order-wrapper .seleted-order .snh {
   font-size: 1.5em;
   letter-spacing: 2.34px;
-  padding: 15px 0;
+  padding: 19px 0;
   border-bottom: 1px solid #D6D6D6;
   text-align: center;
 }
@@ -1314,7 +1308,7 @@
   .ocu-page .order-wrapper .seleted-order .snh {
     font-size: 1.25em;
     padding: 0;
-    padding-bottom: 10px;
+    padding-bottom: 16px;
   }
 }
 
@@ -1325,13 +1319,13 @@
 .ocu-page .order-wrapper .seleted-order .dnq {
   font-size: 1.5em;
   text-align: center;
-  padding: 15px 0;
+  padding: 19px 0;
 }
 
 @media screen and (max-width: 1200px) {
   .ocu-page .order-wrapper .seleted-order .dnq {
     font-size: 1em;
-    padding: 10px 0;
+    padding: 16px 0;
   }
 }
 
