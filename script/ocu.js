@@ -9,7 +9,7 @@ const menuWrapper = document.querySelector('.menu-wrapper')
 
 const itemsArray = [
     {
-        src: "/assets/ocu/mainmask1@2x.png",
+        src: "/assets/ocu/FacemasksPeacePattern2x.png",
         detail: "Peace Pattern"
     },
     {
