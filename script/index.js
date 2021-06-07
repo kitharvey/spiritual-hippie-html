@@ -75,39 +75,38 @@ paymentCCBTN.checked = true
 const onLoad = () => {
     let isOrderSummaryOpen = true
     let isSecured = true
-    let products = ''
 
-
-
-    productData.forEach( 
-        ({img,
+    function arrayToHTML({img,
         name,
         description,
         details,
         price,
         qnty,
-        isFree}) => {
-        products += `<div class="product" id=${name}>
-                        <div class="img-wrapper">
-                            <img src=${img} alt=${name} />
-                            <span class="qnty">${qnty}</span>
-                        </div>
-                    
-                        <div class="info">
-                            <p class="name">${name}</p>
-                            ${description ? `<p class="description">${description}</p>` : ""}
-                            <div class="details">
-                                ${details.map( detail => `<p>${detail}</p>` ).join("")}
-                            </div>
-                        </div>
-                        <div class="price-wrapper">
-                        <p class=${isFree ? "no-price" : "price"}>$${price.toFixed(2)}</p>
-                        ${isFree ? "<p class='free'>FREE</p>" : ""}
-                        </div>
-                    </div>`
-    })
+        isFree}, isPrice){
+        return `<div class="product" id=${name}>
+        <div class="img-wrapper">
+            <img src=${img} alt=${name} />
+            <span class="qnty">${qnty}</span>
+        </div>
+    
+        <div class="info">
+            <p class="name">${name}</p>
+            ${description ? `<p class="description">${description}</p>` : ""}
+            <div class="details">
+                ${details.map( detail => `<p>${detail}</p>` ).join("")}
+            </div>
+        </div>
+        ${isPrice ? `<div class="price-wrapper">
+        <p class=${isFree ? "no-price" : "price"}>$${price.toFixed(2)}</p>
+        ${isFree ? "<p class='free'>FREE</p>" : ""}
+        </div>` : ""}
+        </div>`
+    }
 
-    productWrapperDOM.innerHTML = products
+
+    const productWrapperInnerHTML = productData.map(item => arrayToHTML(item, true))
+
+    productWrapperDOM.innerHTML = productWrapperInnerHTML.join("")
 
     function onclickShippingBTN() {
         shippingDOM.style.display = 'block'

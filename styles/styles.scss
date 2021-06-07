@@ -1,5 +1,6 @@
 @import "./checkout/checkout-page";
 @import "./ocu/ocu-page";
+@import "./thankyou/thankyou-page";
 
 
 *,
@@ -140,6 +141,10 @@ footer {
       padding: 0 .875rem;
       border-left: 1px solid #bdbdbd;
 
+      @media screen and (max-width: 400px) {
+        margin-left: 0rem;
+        padding: 0 .5rem;
+      }
       &:first-child {
         border-left: none;
       }
