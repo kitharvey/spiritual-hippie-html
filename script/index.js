@@ -18,6 +18,9 @@ const paymentCCBTN = document.getElementById('creditcard-button')
 const paymentPPBTN = document.getElementById('paypal-button')
 const paymentCCFORM = document.getElementById('payment-cc-input')
 const paymentPPFORM = document.getElementById('payment-pp-info')
+const advertButtonName = document.getElementById('advert-button-name')
+const addToMyOrderCheckBox = document.getElementById('addtomyorder')
+const addToMyOrderBTN = document.getElementById('addtomyorder-button')
 const closeModalBTN = document.querySelectorAll('#close-modal')
 
 const productData = [
@@ -66,6 +69,7 @@ const productData = [
       isFree: false,
     },
   ]
+
 
 
 sameAddressBTN.checked = true
@@ -190,13 +194,24 @@ const onLoad = () => {
         }
     }
 
+    function toggleAdvert(){
+        if(addToMyOrderCheckBox.checked){
+            advertButtonName.textContent = "Add to my order"
+        }
+
+        else {
+            window.history.back()
+            // advertButtonName.textContent = "Successfully Added :)"
+        }
+    }
+
     securedShippingAddressBTN.onclick = securedShippingAddress
 
     differentAddressBTN.onclick = selectBillingAddress
     sameAddressBTN.onclick = selectBillingAddress
     paymentCCBTN.onclick = selectPayment
     paymentPPBTN.onclick = selectPayment
-    
+    addToMyOrderBTN.onclick = toggleAdvert
 
     paymentBTN.addEventListener('click', onclickPaymentBTN)
     shippingBTN.addEventListener('click', onclickShippingBTN)

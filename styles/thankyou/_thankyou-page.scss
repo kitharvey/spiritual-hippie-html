@@ -2,9 +2,12 @@
     #map{
         height: 270px;
         width: 100%;
+        @media screen and (max-width: 1200px) {
+            height: 180px;
+        }
     }
     .order-wrapper{
-        margin-top: 50px;
+        margin-top: 70px;
 
         @media screen and (max-width: 1200px) {
             margin-top: 0;
@@ -51,7 +54,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
+            @media screen and (max-width: 576px){
+                flex-direction: column;
+                align-items: flex-start;
+            }
             margin-bottom: 20px;
             p{
                 font-size: 24px;
@@ -67,6 +73,12 @@
                 letter-spacing: 0px;
                 padding: 12px 40px;
                 border: 1px solid #000000;
+
+                @media screen and (max-width: 410px) {
+                    padding: 12px 0;
+                    text-align: center;
+                    width: 100%;
+                }
             }
         }
     }
@@ -81,6 +93,10 @@
             padding: 0px 40px;
             margin-bottom: 35px;
         }
+
+        @media screen and (max-width: 410px) {
+            padding: 20px;
+        }
         .product{
             &:last-child{
                 border-bottom: 0;
@@ -91,6 +107,10 @@
     .shipment-details-wrapper{
         border: 1px solid #CED4DA;
         padding: 28px 40px;
+
+        @media screen and (max-width: 410px) {
+            padding: 20px;
+        }
 
         .details-wrapper{
             display: grid;
@@ -140,6 +160,11 @@
             height: 52.4px;
             width: 52.4px;
             margin-right: 23px;
+            fill:none;
+            stroke:#000;
+            stroke-linecap:round;
+            stroke-linejoin:round;
+            stroke-width:2px;
         }
 
         .order-title{
@@ -160,6 +185,12 @@
         letter-spacing: 0px;
         padding: 16px 53px;
         width: max-content;
+
+        @media screen and (max-width: 410px) {
+            padding: 16px 0;
+            text-align: center;
+            width: 100%;
+        }
     }
 
 

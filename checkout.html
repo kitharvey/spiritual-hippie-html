@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Hippie</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+  <main class="checkout-main-page" >
+    <div class="container">
+        <div class="checkout-page">
+
+            <div class="left-card" id='left-card'>
+              <img class="logo" src="/assets/logo.png" alt="Spiritual Hippie logo">
+                <div class="buttons-wrapper">
+                  <div
+                    role="button"
+                    tabIndex="0"
+                    aria-hidden="true"
+                    class="button active"
+                    id="shipping-button"
+                  >
+                    <span>Shipping</span>
+                  </div>
+                  <div
+                    role="button"
+                    tabIndex="1"
+                    aria-hidden="true"
+                    class="button idle"
+                    id="payment-button"
+                  >
+                    <span>Payment</span>
+                  </div>
+                </div>     
+                <div class="shipping-wrapper" id="shipping-dom">
+                    <div class="input-wrapper">
+                      <p class="title">Contact Information</p>
+                      <div class="mt-10">
+                        <input class="input" type="email" placeholder="Email" />
+                      </div>
+                    </div>
+                    <div class="input-wrapper address">
+                      <p class="title">Shipping Address</p>
+                      <div class="mt-10">
+                        <div class="grid-2">
+                          <input class="input" type="text" name="firstName" placeholder="First name" />
+                          <input class="input" type="text" name="lastName" placeholder="Last name" />
+                        </div>
+                        <input class="input" type="text" name="address" placeholder="Address" />
+                        <input class="input" type="text" name="city" placeholder="City" />
+                        <div class="grid-3">
+                          <select>
+                            <option>Select Country</option>
+                          </select>
+                          <select>
+                            <option>Province</option>
+                          </select>
+                          <input class="input" type="text" name="postal" placeholder="Postal Code" />
+                        </div>
+                        <input class="input button-border" name="phoneNumber" type="tel" placeholder="Phone number (optional)" />
+                      </div>
+                    </div>
+                    <div
+                      role="button"
+                      tabIndex="5"
+                      aria-hidden="true"
+                      class="submit-button"
+                      id="continue-to-payment"
+                    >
+                      CONTINUE TO PAYMENT
+                    </div>
+                  </div>
+
+
+                  <div class="payment-wrapper" id="payment-dom">
+                    <div class="input-wrapper">
+                      <p class="title">Shipping method</p>
+                      <div class="mt-10" >
+                        <label class="header">
+                          <input type="radio" id="secured-shipping" value="secured-shipping" name="ship-method" />
+                          <span>Secured Shipping</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="input-wrapper address">
+                      <p class="title">Billing address</p>
+                      <div class="mt-10" >
+                        <label class="header">
+                          <input type="radio" id="same-address" value="same-address" name="same-address" />
+                          <span>Same as shipping address</span>
+                        </label>
+                          <label class="header">
+                            <input type="radio" id="different-address" value="different-address" name="same-address"/>
+                            <span>Use a different billing address</span>
+                          </label>
+                          <div class="input-wrapper address" id="different-address-form">
+                            <div class="grid-2">
+                              <input class="input" type="text" name="firstName" placeholder="First name" />
+                              <input class="input" type="text" name="lastName" placeholder="Last name" />
+                            </div>
+                            <input class="input" type="text" name="address" placeholder="Address" />
+                            <input class="input" type="text" name="city" placeholder="City" />
+                            <div class="grid-3">
+                              <select>
+                                <option>Select Country</option>
+                              </select>
+                              <select>
+                                <option>Province</option>
+                              </select>
+                              <input class="input" type="text" name="postal" placeholder="Postal Code" />
+                            </div>
+                            <input class="input button-border" name="phoneNumber" type="tel" placeholder="Phone number (optional)" />
+                          </div>
+                      </div>
+                    </div>
+                    <div class="input-wrapper payment">
+                      <p class="title">Payment</p>
+                      <small>All transactions are secured and encrypted</small>
+                      <div class="creditcard-wrapper mt-10">
+                        <label class="header creditcard">
+                          <input
+                            class="input"
+                            type="radio"
+                            id="creditcard-button"
+                            value="creditcard"
+                            name="payment"
+                          />
+                          <span>Credit Card</span>
+                        </label>
+                          <div class="payment-input-wrapper" id="payment-cc-input">
+                            <input class="input" type="text" placeholder="Card number" />
+                            <input class="input" type="text" placeholder="Name on the card" />
+                            <div class="grid-3">
+                              <input class="input" type="text" placeholder="Month" />
+                              <input class="input" type="text" placeholder="Year" />
+                              <input class="input" type="text" placeholder="Security code" />
+                            </div>
+                          </div>
+                      </div>
+                      <div>
+                        <label class="header paypal">
+                          <input type="radio" id="paypal-button" value="paypal" name="payment" />
+                          <span>
+                            <img src="/assets/paypal-icon.png" alt="paypal logo" />
+                          </span>
+                        </label>
+                        <div class="payment-input-wrapper paypal-info" id="payment-pp-info" >
+                          <img src="/assets/PP_box.png" alt="card icon">
+                          <p>After clicking “Complete order”, you will be redirected to PayPal to complete your purchase securely.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      role="button"
+                      tabIndex={-4}
+                      aria-hidden="true"
+                      class="submit-button"
+                      id="complete-order"
+                    >
+                      Complete order
+                    </div>
+                  </div>
+
+
+                <img class="guaranteed" src="/assets/Guaranteed_two@2x.png" alt="Guaranteed"/>
+          
+                <div class="modal-wrapper" id="modal">
+                  <div class="modal">
+                    <div
+                      role="button"
+                      tabIndex='2'
+                      aria-hidden="true"
+                      class="close-button"
+                      id="close-modal"
+                    >
+                      <img src="/assets/Xbutton.svg" alt="close-button" />
+                    </div>
+                    <p>Your Payment Method was declined.</p>
+                    <p>Please try another Payment Method.</p>
+                    <div
+                      role="button"
+                      tabIndex='3'
+                      aria-hidden="true"
+                      class="submit-button"
+                      id="close-modal"
+                    >
+                      ok, try another payment method
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="right-card">
+                <!-- <Advert /> -->
+                <div class="advert">
+                  <div class="line-top"></div>
+                  <div class="line-bottom"></div>
+                  <div class="line-right"></div>
+                  <div class="line-left"></div>
+                    <div class="top">
+                      <img
+                        src="/assets/BandanaSpiritualEdited_500x500.png"
+                        alt="Bandana Spiritual Edited"
+                      />
+                      <div class="details">
+                        <p class="name">Vibe With These Face Shields!</p>
+                        <div class="price">
+                          <span>$24.99</span> $6.95
+                        </div>
+                      </div>
+                    </div>
+                    <input type="checkbox" id="addtomyorder" name="addtomyorder" />
+                    <label class="button" id="addtomyorder-button" for="addtomyorder" role="button" tabIndex="6">
+                      <div class="checkbox"></div>
+                      <span id="advert-button-name" >ADD TO MY ORDER</span>
+                    </label>
+                </div>
+
+                <div class="order-wrapper" id="order-wrapper">
+                  <div id="product-wrapper" >
+
+                  </div>
+
+
+                <!-- <Coupon /> -->
+
+                <div class="coupon-wrapper">
+                    <div class="input-wrapper">
+                      <input class="input" type="text" placeholder="Woohoo! Congrats!" />
+                      <div class="button" role="button" tabIndex="10" aria-hidden="true">
+                        Apply
+                      </div>
+                    </div>
+              
+                    <div class="tag-wrapper">
+                      <img src="/assets/tagicon.svg" alt="tag icon">
+                      <p>BOGO</p>
+                      <div class="button" role="button" tabIndex="7" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><style>.a{fill:none;}.b{isolation:isolate;clip-path:url(#a);}.c{fill:#717171;}</style><clipPath id="a"><rect class="a" width="16" height="16"/></clipPath></defs><g class="b"><path class="c" d="M7.778,9.192,1.414,15.557,0,14.142,6.364,7.778,0,1.414,1.414,0,7.778,6.364,14.142,0l1.415,1.414L9.192,7.778l6.364,6.364-1.415,1.415Z"/></g></svg>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- <SubTotal /> -->
+                  <div class="total-wrapper">
+                      <div class="subtotal-wrapper">
+                        <div class="flex-row">
+                          <p>Subtotal</p>
+                          <p>$105.98</p>
+                        </div>
+                        <div class="flex-row discount">
+                          <div class="discount-wrapper">
+                            <p>Discount</p>
+                            <div class="tag" >
+                              <img src="/assets/tagicon.svg" alt="tag icon">
+                              <span>BOGO</span>
+                            </div>
+                          </div>
+                          <p>-$35.00</p>
+                        </div>
+                        <div class="flex-row">
+                          <p>Shipping</p>
+                          <p>Calculated at next step</p>
+                        </div>
+                      </div>
+                      <div class="total flex-row">
+                        <p>Total</p>
+                        <p>
+                          <span>USD</span>$70.98
+                        </p>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="order-summary-button" role="button" tabIndex="11" aria-hidden="true" id="order-summary-button">
+                  <div class="order-title" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;}</style></defs><g transform="translate(-456 -1008)"><path class="a" d="M461.5,1013.5h18l-3.761,10.342a1,1,0,0,1-.939.658H463.383a1,1,0,0,1-.993-.876L460.5,1008.5h-4"/><circle class="a" cx="2" cy="2" r="2" transform="translate(472.5 1027.5)"/><circle class="a" cx="2" cy="2" r="2" transform="translate(461.5 1027.5)"/></g></svg>
+                    <span class="" id="order-summary-button-title">Hide order summary</span>
+                    <svg id="order-summary-button-arrow" xmlns="http://www.w3.org/2000/svg" width="10.163" height="5.789" viewBox="0 0 10.163 5.789"><defs><style>.a{fill:none;stroke:#000;}</style></defs><path class="a" d="M1216.5,240.488l4.728,4.728,4.728-4.728" transform="translate(-1216.142 -240.135)"/></svg>
+                  </div>
+                  <p class="total-price" >$70.98</p>
+                </div>
+
+                <img class="logo" src="/assets/logo.png" alt="Spiritual Hippie logo">
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a class="brand" href="/">
+          Spiritual Hippie
+        </a>
+        <div class="footer-menu">
+          <a href="/Support">
+            Support
+          </a>
+          <a href="/Track Order">
+            Track Order
+          </a>
+          <a href="/Privacy Policy">
+            Privacy Policy
+          </a>
+          <a href="/Terms of Service">
+            Terms of Service
+          </a>
+        </div>
+      </footer>
+  </main>
+</body>
+<script src="/script/index.js" ></script>
+</html>

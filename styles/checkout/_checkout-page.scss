@@ -63,6 +63,10 @@
     padding: 2em 0;
     grid-gap: 1.25em;
   }
+  @media screen and (max-width: 410px) {
+    padding: 1em 0;
+    grid-gap: 1em;
+  }
 
   .price-wrapper {
     display: flex;
@@ -137,6 +141,10 @@
       font-family: 'Hurme-Geometric-Sans-3';
       line-height: 1.2;
       padding: 2px 0;
+
+      @media screen and (max-width: 410px) {
+        flex-direction: column;
+      }
       p {
         padding-right: 8px;
         margin-right: 8px;
@@ -156,6 +164,12 @@
 
         @media screen and (max-width: 1200px) {
           font-size: 10px;
+        }
+
+        @media screen and (max-width: 410px) {
+          padding-right: 0;
+          margin-right: 0;
+          border-right: none;
         }
       }
     }

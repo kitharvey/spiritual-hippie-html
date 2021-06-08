@@ -63,24 +63,11 @@ div[role="button"]{
   width: 100%;
   margin: 0 auto;
   height: 100%;
-  // padding: 0 25px;
-  // @media screen and (min-width: 576px) {
-  //   max-width: 576px;
-  // }
-  // @media screen and (min-width: 768px) {
-  //   max-width: 576px;
-  // }
-  // @media screen and (min-width: 1024px) {
-  //   max-width: 768px;
-  // }
-  // @media screen and (min-width: 1280px) {
-  //   max-width: 1280px;
-  // }
-  // @media screen and (min-width: 1536px) {
-  //   max-width: 1536px;
-  // }
-
   padding: 0 30px;
+  
+  @media screen and (max-width: 410px) {
+    padding: 0 10px;
+  }
   @media screen and (min-width: 576px) {
     max-width: 540px;
   }
@@ -141,9 +128,15 @@ footer {
       padding: 0 .875rem;
       border-left: 1px solid #bdbdbd;
 
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 410px) {
         margin-left: 0rem;
-        padding: 0 .5rem;
+        padding: 0 .25rem;
+        &:first-child{
+          padding-left: 0;
+        }
+        &:last-child{
+          padding-right: 0;
+        }
       }
       &:first-child {
         border-left: none;

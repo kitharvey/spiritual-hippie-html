@@ -52,6 +52,35 @@ const productData = [
     },
   ]
 
+  const shipmentProductData = [
+    {
+      img: "/assets/shoe3-1.png",
+      name: "Yin Yang Mandala",
+      description: "Women's Aqua Barefoot Shoes",
+      details: ["Black Sole", "US 9-10", "EU40-41"],
+      price: 35,
+      qnty: 2,
+      isFree: true,
+    },
+    {
+      img: "/assets/shoe1-1.png",
+      name: "Watercolor Flowers",
+      description: "Women's Aqua Barefoot Shoes",
+      details: ["Black Sole", "US 9-10", "EU40-41"],
+      price: 35,
+      qnty: 2,
+      isFree: false,
+    },
+    {
+      img: "/assets/GiftYWV1.png",
+      name: "Copy of Free Mystery Gift",
+      details: ["Free Gift", "Vibrant Vibes", "One Size"],
+      price: 0,
+      qnty: 1,
+      isFree: false,
+    },
+  ]
+
 
 const onLoad = () => {
     let isOrderSummaryOpen = true
@@ -87,8 +116,7 @@ const onLoad = () => {
 
     const productWrapperInnerHTML = productData.map(item => arrayToHTML(item, true))
     productWrapperDOM.innerHTML = productWrapperInnerHTML.join("")
-    productData.pop()
-    const shipmentProductWrapperInnerHTML = productData.map(item => arrayToHTML(item, false))
+    const shipmentProductWrapperInnerHTML = shipmentProductData.map(item => arrayToHTML(item, false))
     shipmentProductWrapperDOM.innerHTML = shipmentProductWrapperInnerHTML.join("")
 
     function onClickOrderSummary(){

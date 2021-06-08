@@ -59,6 +59,12 @@
   font-size: 1rem;
 }
 
+@media screen and (max-width: 410px) {
+  .right-card .order-summary-button .order-title span {
+    margin: 0 5px;
+  }
+}
+
 .right-card .order-summary-button .order-title #order-summary-button-arrow {
   transform: rotate(180deg);
 }
@@ -237,6 +243,13 @@
   }
 }
 
+@media screen and (max-width: 410px) {
+  .right-card .coupon-wrapper .input-wrapper .input {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+
 .right-card .coupon-wrapper .input-wrapper .button {
   background-color: #c4c4c4;
   padding: 10px 40px;
@@ -408,6 +421,23 @@
   }
 }
 
+.right-card .advert a {
+  display: block;
+}
+
+.right-card .advert input[type='checkbox'] {
+  display: none;
+}
+
+.right-card .advert input[type='checkbox']:checked ~ .button {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.right-card .advert input[type='checkbox']:checked ~ .button .checkbox {
+  border: 2px solid #ffffff;
+}
+
 .right-card .advert .button {
   background: transparent;
   border: 2px solid #000000;
@@ -416,6 +446,7 @@
   font-size: 1.25em;
   text-align: center;
   letter-spacing: 0px;
+  text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -436,8 +467,7 @@
   user-select: none;
 }
 
-.right-card .advert .button input[type='checkbox'] {
-  appearance: none;
+.right-card .advert .button .checkbox {
   border: 2px solid #000000;
   outline: none;
   width: 1em;
@@ -448,11 +478,7 @@
   outline: none;
 }
 
-.right-card .advert .button input[type='checkbox']:checked {
-  background-color: #000000;
-}
-
-.right-card .advert .button input[type='checkbox']:after {
+.right-card .advert .button .checkbox:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -516,14 +542,6 @@
     margin: 0;
     border-radius: 0px;
   }
-  .left-card .input:first-child,
-  .left-card select:first-child {
-    border-radius: 3px 3px 0 0;
-  }
-  .left-card .input:last-child,
-  .left-card select:last-child {
-    border-radius: 0 0 3px 3px;
-  }
 }
 
 .left-card .input:focus-within,
@@ -535,6 +553,20 @@
   outline: none;
 }
 
+@media screen and (max-width: 576px) {
+  .left-card input[name="firstName"] {
+    margin: 0;
+    border-radius: 3px 3px 0 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .left-card input[name="phoneNumber"] {
+    margin: 0;
+    border-radius: 0 0 3px 3px;
+  }
+}
+
 .left-card label {
   user-select: none;
   padding: 10px 20px;
@@ -544,6 +576,12 @@
   border: 0.5px solid #ced4da;
   height: 45px;
   font-family: 'Hurme-Geometric-Sans-3-light';
+}
+
+@media screen and (max-width: 410px) {
+  .left-card label {
+    padding: 10px;
+  }
 }
 
 .left-card input,
@@ -734,7 +772,7 @@
 }
 
 .left-card .payment .creditcard {
-  background-image: url(/assets/CC.jpg);
+  background-image: url("/assets/CC.jpg");
   background-size: 231px 38px;
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
@@ -743,6 +781,12 @@
 @media screen and (max-width: 1200px) {
   .left-card .payment .creditcard {
     background-size: 145px 24px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .left-card .payment .creditcard {
+    background-size: 100px;
   }
 }
 
@@ -787,7 +831,6 @@
 .left-card .header span {
   display: flex;
   align-items: center;
-  padding: 0.375em 0.75em 0.375em 0.375em;
   border-radius: 99em;
   transition: 0.25s ease;
 }
@@ -996,6 +1039,13 @@
   }
 }
 
+@media screen and (max-width: 410px) {
+  .product {
+    padding: 1em 0;
+    grid-gap: 1em;
+  }
+}
+
 .product .price-wrapper {
   display: flex;
   align-items: center;
@@ -1079,6 +1129,12 @@
   padding: 2px 0;
 }
 
+@media screen and (max-width: 410px) {
+  .product .info .details {
+    flex-direction: column;
+  }
+}
+
 .product .info .details p {
   padding-right: 8px;
   margin-right: 8px;
@@ -1100,6 +1156,14 @@
 @media screen and (max-width: 1200px) {
   .product .info .details p {
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .product .info .details p {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
   }
 }
 
@@ -1333,7 +1397,14 @@
   border: 0.5px solid #C4C4C4;
   padding: 10px 20px;
   display: flex;
+  align-items: center;
   height: 45px;
+}
+
+@media screen and (max-width: 576px) {
+  .ocu-page .order-wrapper .seleted-order .details {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1347,6 +1418,10 @@
   font-size: 1em;
   letter-spacing: 0px;
   color: #333333;
+}
+
+.ocu-page .order-wrapper .seleted-order .details p:last-child {
+  margin-right: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1416,12 +1491,19 @@
   font-family: 'Hurme-Geometric-Sans-3-bold';
   text-align: center;
   padding: 22px;
+  display: block;
 }
 
 @media screen and (max-width: 1200px) {
   .ocu-page .order-wrapper .seleted-order .purchase {
     font-size: 1em;
     padding: 18px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .ocu-page .order-wrapper .seleted-order .purchase {
+    padding: 10px;
   }
 }
 
@@ -1434,12 +1516,20 @@
   text-align: center;
   padding: 16px;
   font-family: 'Hurme-Geometric-Sans-3-light';
+  display: block;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 411px) {
   .ocu-page .order-wrapper .seleted-order .decline {
     font-size: .75em;
     padding: 20px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .ocu-page .order-wrapper .seleted-order .decline {
+    font-size: .6em;
+    padding: 10px;
   }
 }
 
@@ -1476,6 +1566,12 @@
   }
 }
 
+@media screen and (max-width: 410px) {
+  .header-title .small-title {
+    padding: 10px;
+  }
+}
+
 .header-title .small-title svg {
   margin-bottom: -5px;
   height: 36px;
@@ -1495,8 +1591,14 @@
   width: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+  .thank-you-wrapper #map {
+    height: 180px;
+  }
+}
+
 .thank-you-wrapper .order-wrapper {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1557,8 +1659,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .thank-you-wrapper .shipment-wrapper .shipment-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .thank-you-wrapper .shipment-wrapper .shipment-top p {
@@ -1579,6 +1687,14 @@
   border: 1px solid #000000;
 }
 
+@media screen and (max-width: 410px) {
+  .thank-you-wrapper .shipment-wrapper .shipment-top .button {
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .thank-you-wrapper .shipment-product-wrapper {
   border: 1px solid #CED4DA;
   padding: 10px 40px;
@@ -1592,6 +1708,12 @@
   }
 }
 
+@media screen and (max-width: 410px) {
+  .thank-you-wrapper .shipment-product-wrapper {
+    padding: 20px;
+  }
+}
+
 .thank-you-wrapper .shipment-product-wrapper .product:last-child {
   border-bottom: 0;
 }
@@ -1599,6 +1721,12 @@
 .thank-you-wrapper .shipment-details-wrapper {
   border: 1px solid #CED4DA;
   padding: 28px 40px;
+}
+
+@media screen and (max-width: 410px) {
+  .thank-you-wrapper .shipment-details-wrapper {
+    padding: 20px;
+  }
 }
 
 .thank-you-wrapper .shipment-details-wrapper .details-wrapper {
@@ -1654,6 +1782,11 @@
   height: 52.4px;
   width: 52.4px;
   margin-right: 23px;
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
 }
 
 .thank-you-wrapper .order-title-wrapper .order-title .order-number {
@@ -1672,6 +1805,14 @@
   letter-spacing: 0px;
   padding: 16px 53px;
   width: max-content;
+}
+
+@media screen and (max-width: 410px) {
+  .thank-you-wrapper .submit-button {
+    padding: 16px 0;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 *,
@@ -1726,6 +1867,12 @@ div[role="button"] {
   margin: 0 auto;
   height: 100%;
   padding: 0 30px;
+}
+
+@media screen and (max-width: 410px) {
+  .container {
+    padding: 0 10px;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -1807,10 +1954,16 @@ footer .footer-menu a {
   border-left: 1px solid #bdbdbd;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
   footer .footer-menu a {
     margin-left: 0rem;
-    padding: 0 .5rem;
+    padding: 0 .25rem;
+  }
+  footer .footer-menu a:first-child {
+    padding-left: 0;
+  }
+  footer .footer-menu a:last-child {
+    padding-right: 0;
   }
 }
 

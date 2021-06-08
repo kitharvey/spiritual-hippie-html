@@ -39,12 +39,6 @@
       @media screen and (max-width: 576px) {
         margin: 0;
         border-radius: 0px;
-        &:first-child{
-          border-radius: 3px 3px 0 0;
-        }
-        &:last-child{
-          border-radius: 0 0 3px 3px;
-        }
       }
   
       &:focus-within,
@@ -52,6 +46,19 @@
         color: #333;
         border: 0.5px solid #717171;
         outline: none;
+      }
+    }
+
+    input[name="firstName"]{
+      @media screen and (max-width: 576px) {
+        margin: 0;
+        border-radius: 3px 3px 0 0;
+      }
+    }
+    input[name="phoneNumber"]{
+      @media screen and (max-width: 576px) {
+        margin: 0;
+        border-radius: 0 0 3px 3px;
       }
     }
 
@@ -64,7 +71,9 @@
       border: 0.5px solid #ced4da;
       height: 45px;
       font-family: 'Hurme-Geometric-Sans-3-light';
-
+      @media screen and (max-width: 410px) {
+        padding: 10px;
+      }
     }
   
     input,
@@ -239,13 +248,16 @@
       }
 
       .creditcard{
-        background-image: url(/assets/CC.jpg);
+        background-image: url('/assets/CC.jpg');
         background-size: 231px 38px;
         background-repeat: no-repeat;
         background-position: calc(100% - 20px) center;
 
         @media screen and (max-width: 1200px) {
           background-size: 145px 24px;
+        }
+        @media screen and (max-width: 410px) {
+          background-size: 100px;
         }
       }
 
@@ -290,7 +302,6 @@
       span {
         display: flex;
         align-items: center;
-        padding: 0.375em 0.75em 0.375em 0.375em;
         border-radius: 99em;
         transition: 0.25s ease;
   
