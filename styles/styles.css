@@ -1129,7 +1129,7 @@
   padding: 2px 0;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 300px) {
   .product .info .details {
     flex-direction: column;
   }
@@ -1159,7 +1159,7 @@
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 300px) {
   .product .info .details p {
     padding-right: 0;
     margin-right: 0;
@@ -1503,7 +1503,7 @@
 
 @media screen and (max-width: 410px) {
   .ocu-page .order-wrapper .seleted-order .purchase {
-    padding: 10px;
+    padding: 20px 10px;
   }
 }
 
@@ -1529,7 +1529,7 @@
 @media screen and (max-width: 410px) {
   .ocu-page .order-wrapper .seleted-order .decline {
     font-size: .6em;
-    padding: 10px;
+    padding: 20px 10px;
   }
 }
 
@@ -1687,7 +1687,7 @@
   border: 1px solid #000000;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 414px) {
   .thank-you-wrapper .shipment-wrapper .shipment-top .button {
     padding: 12px 0;
     text-align: center;
