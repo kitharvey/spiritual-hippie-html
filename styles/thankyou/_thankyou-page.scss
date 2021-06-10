@@ -192,7 +192,13 @@
         padding: 16px 53px;
         width: max-content;
 
-        @media screen and (max-width: 410px) {
+
+
+        @media screen and (max-width: 576px) {
+            margin-top: 35px;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 320px) {
             padding: 16px 0;
             text-align: center;
             width: 100%;

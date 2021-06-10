@@ -1553,7 +1553,7 @@
   color: #FFFFFF;
   font-size: .9em;
   text-align: center;
-  padding: 16px;
+  padding: 16px 5px;
   font-family: 'Hurme-Geometric-Sans-3-light';
   display: block;
   transition: background .25s ease-in-out;
@@ -1563,17 +1563,17 @@
   background: #636363;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 411px) {
+@media screen and (max-width: 1200px) and (min-width: 320px) {
   .ocu-page .order-wrapper .seleted-order .decline {
     font-size: .75em;
-    padding: 20px;
+    padding: 20px 5px;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 319px) {
   .ocu-page .order-wrapper .seleted-order .decline {
     font-size: .6em;
-    padding: 20px 10px;
+    padding: 20px 5px;
   }
 }
 
@@ -1856,7 +1856,14 @@
   width: max-content;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 576px) {
+  .thank-you-wrapper .submit-button {
+    margin-top: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
   .thank-you-wrapper .submit-button {
     padding: 16px 0;
     text-align: center;
