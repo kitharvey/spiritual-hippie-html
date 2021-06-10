@@ -1570,7 +1570,7 @@
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
   .ocu-page .order-wrapper .seleted-order .decline {
     font-size: .6em;
     padding: 20px 10px;
