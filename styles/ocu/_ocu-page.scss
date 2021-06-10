@@ -66,6 +66,11 @@
 
                     img{
                         width: 100%;
+                        transition: all .25s ease-in-out;
+
+                        &:hover, &:focus{
+                            outline: 1px solid #717171;
+                        }
                     }
                 }
             }
@@ -224,6 +229,11 @@
                     justify-content: center;
                     width: 100%;
                     user-select: none;
+                    transition: all .25s ease-in-out;
+
+                    &:hover, &:focus{
+                      background: #e4e4e4;
+                    }
                 }
             }
 
@@ -238,6 +248,10 @@
                 text-align: center;
                 padding: 22px;
                 display: block;
+                transition: all .25s ease-in-out;
+                &:hover, &:focus{
+                    background: #10551f;
+                }
                 @media screen and (max-width: 1200px) {
                     font-size: 1em;
                     padding: 18px;
@@ -257,7 +271,10 @@
                 padding: 16px;
                 font-family: 'Hurme-Geometric-Sans-3-light';
                 display: block;
-
+                transition: all .25s ease-in-out;
+                &:hover, &:focus{
+                    background: #636363;
+                }
                 @media screen and (max-width: 1200px) and (min-width: 411px) {
                     font-size: .75em;
                     padding: 20px;

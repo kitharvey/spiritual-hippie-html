@@ -1352,6 +1352,11 @@
 
 .ocu-page .order-wrapper .items-wrapper .menu-wrapper .img-button img {
   width: 100%;
+  transition: all .25s ease-in-out;
+}
+
+.ocu-page .order-wrapper .items-wrapper .menu-wrapper .img-button img:hover, .ocu-page .order-wrapper .items-wrapper .menu-wrapper .img-button img:focus {
+  outline: 1px solid #717171;
 }
 
 .ocu-page .order-wrapper .seleted-order .price-wrapper {
@@ -1531,6 +1536,13 @@
   justify-content: center;
   width: 100%;
   user-select: none;
+  transition: all .25s ease-in-out;
+}
+
+.ocu-page .order-wrapper .seleted-order .number-wrapper .incre:hover, .ocu-page .order-wrapper .seleted-order .number-wrapper .incre:focus,
+.ocu-page .order-wrapper .seleted-order .number-wrapper .decre:hover,
+.ocu-page .order-wrapper .seleted-order .number-wrapper .decre:focus {
+  background: #e4e4e4;
 }
 
 .ocu-page .order-wrapper .seleted-order .purchase {
@@ -1544,6 +1556,11 @@
   text-align: center;
   padding: 22px;
   display: block;
+  transition: all .25s ease-in-out;
+}
+
+.ocu-page .order-wrapper .seleted-order .purchase:hover, .ocu-page .order-wrapper .seleted-order .purchase:focus {
+  background: #10551f;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1569,6 +1586,11 @@
   padding: 16px;
   font-family: 'Hurme-Geometric-Sans-3-light';
   display: block;
+  transition: all .25s ease-in-out;
+}
+
+.ocu-page .order-wrapper .seleted-order .decline:hover, .ocu-page .order-wrapper .seleted-order .decline:focus {
+  background: #636363;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 411px) {
