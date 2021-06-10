@@ -66,6 +66,7 @@
 }
 
 .right-card .order-summary-button .order-title #order-summary-button-arrow {
+  transition: transform .25s ease;
   transform: rotate(180deg);
 }
 
@@ -75,6 +76,7 @@
   flex-direction: column;
   margin-left: -10px;
   padding-left: 10px;
+  transition: max-height .25s ease;
 }
 
 .right-card .total-wrapper {
@@ -261,6 +263,11 @@
   opacity: 1;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+
+.right-card .coupon-wrapper .input-wrapper .button:hover, .right-card .coupon-wrapper .input-wrapper .button:focus {
+  background: #a4a4a4;
 }
 
 @media screen and (max-width: 1200px) {
@@ -501,6 +508,11 @@
   }
 }
 
+.left-card .shipping-wrapper, .left-card .payment-wrapper {
+  animation-duration: .5s;
+  animation-name: fadeIn;
+}
+
 .left-card .guaranteed {
   width: 100%;
   margin-bottom: 30px;
@@ -610,19 +622,28 @@
   }
 }
 
-.left-card #different-address-form {
-  display: none;
+.left-card .different-address-form {
+  overflow: hidden;
+  transition: all .25s ease;
 }
 
-.left-card #different-address-form .input {
+.left-card .different-address-form.open {
+  max-height: 999px;
+}
+
+.left-card .different-address-form.close {
+  max-height: 0;
+}
+
+.left-card .different-address-form .input {
   margin-bottom: 0;
 }
 
-.left-card #different-address-form .input-wrapper {
+.left-card .different-address-form .input-wrapper {
   margin-top: 0;
 }
 
-.left-card #different-address-form .address {
+.left-card .different-address-form .address {
   display: none;
 }
 
@@ -696,6 +717,11 @@
   cursor: pointer;
   width: max-content;
   width: 350px;
+  transition: all .25s ease-in-out;
+}
+
+.left-card .submit-button:hover, .left-card .submit-button:focus {
+  background: #10551f;
 }
 
 @media screen and (max-width: 576px) {
@@ -730,6 +756,8 @@
   background: transparent;
   font-weight: normal;
   width: 50%;
+  transition: all .25s ease-in-out;
+  border-bottom: 1px solid #ced4da;
 }
 
 @media screen and (max-width: 1200px) {
@@ -740,6 +768,7 @@
 
 .left-card .buttons-wrapper .button.active {
   box-shadow: 0px 3px 9px #33333333;
+  border-bottom: 1px solid #ced4da00;
 }
 
 .left-card .buttons-wrapper .button.idle {
@@ -868,7 +897,18 @@
 
 .left-card .payment-input-wrapper {
   background: #F6F6F6;
+  overflow: hidden;
+  transition: all .25s ease;
+}
+
+.left-card .payment-input-wrapper.open {
+  max-height: 999px;
   padding: 10px;
+}
+
+.left-card .payment-input-wrapper.close {
+  max-height: 0;
+  padding: 0;
 }
 
 .left-card .payment-input-wrapper .input {
@@ -909,10 +949,13 @@
 }
 
 .left-card .paypal-info {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: max-height .25 ease-in-out;
 }
 
 .left-card .paypal-info p {
@@ -967,6 +1010,15 @@
 .modal-wrapper .modal p {
   font-size: 1.8125rem;
   font-weight: 300;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .left-card,
@@ -1685,6 +1737,11 @@
   letter-spacing: 0px;
   padding: 12px 40px;
   border: 1px solid #000000;
+  transition: all .25s ease-in-out;
+}
+
+.thank-you-wrapper .shipment-wrapper .shipment-top .button:hover, .thank-you-wrapper .shipment-wrapper .shipment-top .button:focus {
+  background: #e4e4e4;
 }
 
 @media screen and (max-width: 414px) {

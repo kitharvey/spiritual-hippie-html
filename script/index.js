@@ -22,6 +22,7 @@ const advertButtonName = document.getElementById('advert-button-name')
 const addToMyOrderCheckBox = document.getElementById('addtomyorder')
 const addToMyOrderBTN = document.getElementById('addtomyorder-button')
 const closeModalBTN = document.querySelectorAll('#close-modal')
+const paypalLabel = document.querySelector('.paypal')
 
 const productData = [
     {
@@ -129,12 +130,12 @@ const onLoad = () => {
         isOrderSummaryOpen = !isOrderSummaryOpen
 
         if(isOrderSummaryOpen){
-            orderWrapperDOM.style.height = 'max-content'
+            orderWrapperDOM.style.maxHeight = '9999px'
             orderSummaryBTNTITLE.textContent = 'Hide order summary'
             orderSummaryBTNARROW.style.transform = 'rotate(180deg)'
         }
         else{
-            orderWrapperDOM.style.height = '0px'
+            orderWrapperDOM.style.maxHeight = '0'
             orderSummaryBTNTITLE.textContent = 'Show order summary'
             orderSummaryBTNARROW.style.transform = 'rotate(0deg)'
         }
@@ -145,21 +146,23 @@ const onLoad = () => {
 
     function selectBillingAddress(){
         if(differentAddressBTN.checked) {
-            differentAddressFORM.style.display = 'block'
+            differentAddressFORM.classList.replace('close', 'open')
         }
         else{
-            differentAddressFORM.style.display = 'none'
+            differentAddressFORM.classList.replace('open', 'close')
         }
     }
 
     function selectPayment(){
         if(paymentCCBTN.checked){
-            paymentCCFORM.style.display = 'block'
-            paymentPPFORM.style.display = 'none'
+            paymentCCFORM.classList.replace('close', 'open')
+            paymentPPFORM.classList.replace('open', 'close')
+            paypalLabel.style.borderTop = '0.5px solid #ced4da'
         }
         if(paymentPPBTN.checked){
-            paymentCCFORM.style.display = 'none'
-            paymentPPFORM.style.display = 'flex'
+            paymentCCFORM.classList.replace('open', 'close')
+            paymentPPFORM.classList.replace('close', 'open')
+            paypalLabel.style.borderTop = 'none'
         }
     }
 
@@ -200,8 +203,7 @@ const onLoad = () => {
         }
 
         else {
-            window.history.back()
-            // advertButtonName.textContent = "Successfully Added :)"
+            window.location.href = "/index.html";
         }
     }
 
@@ -213,13 +215,13 @@ const onLoad = () => {
     paymentPPBTN.onclick = selectPayment
     addToMyOrderBTN.onclick = toggleAdvert
 
-    paymentBTN.addEventListener('click', onclickPaymentBTN)
-    shippingBTN.addEventListener('click', onclickShippingBTN)
-    continuePaymentBTN.addEventListener('click', onclickPaymentBTN)
-    orderSummaryBTN.addEventListener('click', onClickOrderSummary)
-    completeOrderBTN.addEventListener('click', () => modalDOM.style.visibility = 'visible')
-    closeModalBTN[0].addEventListener('click', () => modalDOM.style.visibility = 'hidden')
-    closeModalBTN[1].addEventListener('click', () => modalDOM.style.visibility = 'hidden')
+    paymentBTN.onclick = onclickPaymentBTN
+    shippingBTN.onclick = onclickShippingBTN
+    continuePaymentBTN.onclick = onclickPaymentBTN
+    orderSummaryBTN.onclick = onClickOrderSummary
+    completeOrderBTN.onclick = () => modalDOM.style.visibility = 'visible'
+    closeModalBTN[0].onclick = () => modalDOM.style.visibility = 'hidden'
+    closeModalBTN[1].onclick = () => modalDOM.style.visibility = 'hidden'
 }
 
 

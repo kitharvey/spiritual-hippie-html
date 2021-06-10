@@ -123,12 +123,12 @@ const onLoad = () => {
         isOrderSummaryOpen = !isOrderSummaryOpen
 
         if(isOrderSummaryOpen){
-            orderWrapperDOM.style.height = 'max-content'
+            orderWrapperDOM.style.maxHeight = '9999px'
             orderSummaryBTNTITLE.textContent = 'Hide order summary'
             orderSummaryBTNARROW.style.transform = 'rotate(180deg)'
         }
         else{
-            orderWrapperDOM.style.height = '0px'
+            orderWrapperDOM.style.maxHeight = '0'
             orderSummaryBTNTITLE.textContent = 'Show order summary'
             orderSummaryBTNARROW.style.transform = 'rotate(0deg)'
         }

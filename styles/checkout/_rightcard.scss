@@ -53,6 +53,7 @@
         }
       }
       #order-summary-button-arrow{
+        transition: transform .25s ease;
         transform: rotate(180deg);
       }
     }
@@ -64,6 +65,7 @@
     flex-direction: column;
     margin-left: -10px;
     padding-left: 10px;
+    transition: max-height .25s ease;
   }
 
 
@@ -219,6 +221,11 @@
         opacity: 1;
         text-transform: uppercase;
         cursor: pointer;
+        transition: all .25s ease-in-out;
+
+        &:hover, &:focus{
+          background: #a4a4a4;
+        }
 
         @media screen and (max-width: 1200px) {
           font-size: 18px;

@@ -5,6 +5,11 @@
       padding-right: 0;
     }
 
+    .shipping-wrapper, .payment-wrapper{
+      animation-duration: .5s;
+      animation-name: fadeIn;
+    }
+
     .guaranteed{
         width: 100%;
         margin-bottom: 30px;
@@ -103,8 +108,16 @@
 
     }
 
-    #different-address-form{
-      display: none;
+    .different-address-form{
+      overflow: hidden;
+      transition: all .25s ease;
+      &.open{
+        max-height: 999px;
+      }
+
+      &.close{
+        max-height: 0;
+      }
       .input{
         margin-bottom: 0;
       }
@@ -179,6 +192,12 @@
       width: max-content;
       width: 350px;
 
+      transition: all .25s ease-in-out;
+
+      &:hover, &:focus{
+        background: #10551f;
+      }
+
       @media screen and (max-width: 576px) {
         margin-left: auto;
         margin-right: auto;
@@ -206,13 +225,15 @@
         background: transparent;
         font-weight: normal;
         width: 50%;
-
+        transition: all .25s ease-in-out;
+        border-bottom: 1px solid #ced4da;
         @media screen and (max-width: 1200px) {
           font-size: 18px;
         }
   
         &.active {
           box-shadow: 0px 3px 9px #33333333;
+          border-bottom: 1px solid #ced4da00;
         }
         &.idle {
           border-bottom: 1px solid #ced4da;
@@ -336,7 +357,18 @@
     }
     .payment-input-wrapper {
       background: #F6F6F6;
-      padding: 10px;
+      overflow: hidden;
+      transition: all .25s ease;
+      &.open{
+        max-height: 999px;
+        padding: 10px;
+      }
+
+      &.close{
+        max-height: 0;
+        padding: 0;
+      }
+
       .input{
         margin-bottom: 5px;
         height: 35px;
@@ -371,10 +403,13 @@
     }
 
     .paypal-info{
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      transition: max-height .25 ease-in-out;
 
       p{
         text-align: center;
@@ -429,5 +464,15 @@
         font-size: 1.8125rem;
         font-weight: 300;
       }
+    }
+  }
+
+
+  @keyframes fadeIn{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
     }
   }
