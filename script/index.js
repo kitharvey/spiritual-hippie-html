@@ -1,29 +1,3 @@
-const shippingDOM = document.getElementById('shipping-dom')
-const paymentDOM = document.getElementById('payment-dom')
-const shippingBTN = document.getElementById('shipping-button')
-const paymentBTN = document.getElementById('payment-button')
-const continuePaymentBTN = document.getElementById('continue-to-payment')
-const completeOrderBTN = document.getElementById('complete-order')
-const modalDOM = document.getElementById('modal')
-const orderSummaryBTN = document.getElementById('order-summary-button')
-const orderWrapperDOM = document.getElementById('order-wrapper')
-const productWrapperDOM = document.getElementById('product-wrapper')
-const orderSummaryBTNTITLE = document.getElementById('order-summary-button-title')
-const orderSummaryBTNARROW = document.getElementById('order-summary-button-arrow')
-const differentAddressBTN = document.getElementById('different-address')
-const sameAddressBTN = document.getElementById('same-address')
-const securedShippingAddressBTN = document.getElementById('secured-shipping')
-const differentAddressFORM = document.getElementById('different-address-form')
-const paymentCCBTN = document.getElementById('creditcard-button')
-const paymentPPBTN = document.getElementById('paypal-button')
-const paymentCCFORM = document.getElementById('payment-cc-input')
-const paymentPPFORM = document.getElementById('payment-pp-info')
-const advertButtonName = document.getElementById('advert-button-name')
-const addToMyOrderCheckBox = document.getElementById('addtomyorder')
-const addToMyOrderBTN = document.getElementById('addtomyorder-button')
-const closeModalBTN = document.querySelectorAll('#close-modal')
-const paypalLabel = document.querySelector('.paypal')
-
 const productData = [
     {
       img: "/assets/shoe3-1.png",
@@ -73,9 +47,9 @@ const productData = [
 
 
 
-sameAddressBTN.checked = true
-securedShippingAddressBTN.checked = true
-paymentCCBTN.checked = true
+$('#same-address').prop( "checked", true )
+$('#secured-shipping').prop( "checked", true )
+$('#creditcard-button').prop( "checked", true )
 
 const onLoad = () => {
     let isOrderSummaryOpen = true
@@ -111,95 +85,91 @@ const onLoad = () => {
 
     const productWrapperInnerHTML = productData.map(item => arrayToHTML(item, true))
 
-    productWrapperDOM.innerHTML = productWrapperInnerHTML.join("")
+    $('#product-wrapper').html(productWrapperInnerHTML.join(""))
 
     function onclickShippingBTN() {
-        shippingDOM.style.display = 'block'
-        paymentDOM.style.display = 'none'
-        shippingBTN.classList.replace('idle', 'active')
-        paymentBTN.classList.replace('active', 'idle')
+        $('#shipping-dom').show()
+        $('#payment-dom').hide()
+        $('#shipping-button').removeClass("idle").addClass("active")
+        $('#payment-button').removeClass("active").addClass("idle")
     }
     function onclickPaymentBTN() {
-        shippingDOM.style.display = 'none'
-        paymentDOM.style.display = 'block'
-        shippingBTN.classList.replace('active', 'idle')
-        paymentBTN.classList.replace('idle', 'active')
+        $('#shipping-dom').hide()
+        $('#payment-dom').show()
+        $('#shipping-button').removeClass("active").addClass("idle")
+        $('#payment-button').removeClass("idle").addClass("active")
     }
 
     function onClickOrderSummary(){
         isOrderSummaryOpen = !isOrderSummaryOpen
-
+        $('#order-wrapper').slideToggle(500)
         if(isOrderSummaryOpen){
-            orderWrapperDOM.style.maxHeight = '9999px'
-            orderSummaryBTNTITLE.textContent = 'Hide order summary'
-            orderSummaryBTNARROW.style.transform = 'rotate(180deg)'
+            $('#order-summary-button-title').text('Hide order summary')
+            $('#order-summary-button-arrow').css('transform', 'rotate(180deg)')
         }
         else{
-            orderWrapperDOM.style.maxHeight = '0'
-            orderSummaryBTNTITLE.textContent = 'Show order summary'
-            orderSummaryBTNARROW.style.transform = 'rotate(0deg)'
+            $('#order-summary-button-title').text('Show order summary')
+            $('#order-summary-button-arrow').css('transform', 'rotate(0deg)')
         }
         
     }
 
-
+    $('#different-address-form').slideUp(0)
+    $('#payment-pp-info').slideUp(0)
 
     function selectBillingAddress(){
-        if(differentAddressBTN.checked) {
-            differentAddressFORM.classList.replace('close', 'open')
+        if($('#different-address').prop("checked")) {
+            $('#different-address-form').slideDown(250)
         }
         else{
-            differentAddressFORM.classList.replace('open', 'close')
+            $('#different-address-form').slideUp(250)
         }
     }
 
     function selectPayment(){
-        if(paymentCCBTN.checked){
-            paymentCCFORM.classList.replace('close', 'open')
-            paymentPPFORM.classList.replace('open', 'close')
-            paypalLabel.style.borderTop = '0.5px solid #ced4da'
+        if($('#creditcard-button').prop("checked")){
+            $('#payment-cc-input').slideDown(250)
+            $('#payment-pp-info').slideUp(250)
+            $('.paypal').css("border-top", "0.5px solid #ced4da")
         }
-        if(paymentPPBTN.checked){
-            paymentCCFORM.classList.replace('open', 'close')
-            paymentPPFORM.classList.replace('close', 'open')
-            paypalLabel.style.borderTop = 'none'
+        if($('#paypal-button').prop("checked")){
+            $('#payment-cc-input').slideUp(250)
+            $('#payment-pp-info').slideDown(250)
+            $('.paypal').css("border-top", "none")
         }
     }
 
     function securedShippingAddress(){
         isSecured = !isSecured
-        securedShippingAddressBTN.checked = isSecured
+        $('#secured-shipping').prop( "checked", isSecured )
         if(!isSecured){
-            const safeguard = document.getElementById('Safeguard')
-            productWrapperDOM.removeChild(safeguard)
+            $('#Safeguard').remove()
         }
         if(isSecured){
-            const safeguard = document.createElement('div')
-            safeguard.className = "product" 
-            safeguard.id = "Safeguard"
-            safeguard.innerHTML = `<div class="img-wrapper">
-                                <img src="/assets/shippingSafeGuardLogo.png" alt="Safeguard - Shipping Guarantee" />
-                                <span class="qnty">1</span>
-                            </div>
-                        
-                            <div class="info">
-                                <p class="name">Safeguard - Shipping Guarantee</p>
-                                <p class="description">Safeguard shipping guarantee</p>
-                                <div class="details">
-                                   <p>.98</p>
+            const safeguard = $("<div>", {id: "Safeguard", "class": "product"});
+            safeguard.html(`<div class="img-wrapper">
+                                    <img src="/assets/shippingSafeGuardLogo.png" alt="Safeguard - Shipping Guarantee" />
+                                    <span class="qnty">1</span>
                                 </div>
-                            </div>
-                            <div class="price-wrapper">
-                                <p class="price">$0.98</p>
-                            </div>
-                        </div>`
-            productWrapperDOM.appendChild(safeguard)
+                            
+                                <div class="info">
+                                    <p class="name">Safeguard - Shipping Guarantee</p>
+                                    <p class="description">Safeguard shipping guarantee</p>
+                                    <div class="details">
+                                    <p>.98</p>
+                                    </div>
+                                </div>
+                                <div class="price-wrapper">
+                                    <p class="price">$0.98</p>
+                                </div>
+                            </div>`)
+            $('#product-wrapper').append(safeguard)
         }
     }
 
     function toggleAdvert(){
-        if(addToMyOrderCheckBox.checked){
-            advertButtonName.textContent = "Add to my order"
+        if($('#addtomyorder').prop("checked")){
+            $('#advert-button-name').textContent = "Add to my order"
         }
 
         else {
@@ -207,21 +177,17 @@ const onLoad = () => {
         }
     }
 
-    securedShippingAddressBTN.onclick = securedShippingAddress
-
-    differentAddressBTN.onclick = selectBillingAddress
-    sameAddressBTN.onclick = selectBillingAddress
-    paymentCCBTN.onclick = selectPayment
-    paymentPPBTN.onclick = selectPayment
-    addToMyOrderBTN.onclick = toggleAdvert
-
-    paymentBTN.onclick = onclickPaymentBTN
-    shippingBTN.onclick = onclickShippingBTN
-    continuePaymentBTN.onclick = onclickPaymentBTN
-    orderSummaryBTN.onclick = onClickOrderSummary
-    completeOrderBTN.onclick = () => modalDOM.style.visibility = 'visible'
-    closeModalBTN[0].onclick = () => modalDOM.style.visibility = 'hidden'
-    closeModalBTN[1].onclick = () => modalDOM.style.visibility = 'hidden'
+    $('#secured-shipping').click(securedShippingAddress)
+    $('#different-address').click(selectBillingAddress)
+    $('#same-address').click(selectBillingAddress)
+    $('#creditcard-button').click(selectPayment)
+    $('#paypal-button').click(selectPayment)
+    $('#addtomyorder-button').click(toggleAdvert)
+    $('#payment-button').click(onclickPaymentBTN) 
+    $('#shipping-button').click(onclickShippingBTN) 
+    $('#continue-to-payment').click(onclickPaymentBTN)
+    $('#order-summary-button').click(onClickOrderSummary)
+    $('#complete-order').click(() => window.location.href = "/thankyou.html")
 }
 
 

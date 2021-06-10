@@ -1,9 +1,5 @@
-const orderSummaryBTN = document.getElementById('order-summary-button')
-const orderWrapperDOM = document.getElementById('order-wrapper')
 const productWrapperDOM = document.getElementById('product-wrapper')
 const shipmentProductWrapperDOM = document.getElementById('shipment-product-wrapper')
-const orderSummaryBTNTITLE = document.getElementById('order-summary-button-title')
-const orderSummaryBTNARROW = document.getElementById('order-summary-button-arrow')
 
 const productData = [
     {
@@ -115,28 +111,25 @@ const onLoad = () => {
     }
 
     const productWrapperInnerHTML = productData.map(item => arrayToHTML(item, true))
-    productWrapperDOM.innerHTML = productWrapperInnerHTML.join("")
+    $('#product-wrapper').html(productWrapperInnerHTML.join(""))
     const shipmentProductWrapperInnerHTML = shipmentProductData.map(item => arrayToHTML(item, false))
-    shipmentProductWrapperDOM.innerHTML = shipmentProductWrapperInnerHTML.join("")
+    $('#shipment-product-wrapper').html(shipmentProductWrapperInnerHTML.join(""))
 
     function onClickOrderSummary(){
-        isOrderSummaryOpen = !isOrderSummaryOpen
-
-        if(isOrderSummaryOpen){
-            orderWrapperDOM.style.maxHeight = '9999px'
-            orderSummaryBTNTITLE.textContent = 'Hide order summary'
-            orderSummaryBTNARROW.style.transform = 'rotate(180deg)'
-        }
-        else{
-            orderWrapperDOM.style.maxHeight = '0'
-            orderSummaryBTNTITLE.textContent = 'Show order summary'
-            orderSummaryBTNARROW.style.transform = 'rotate(0deg)'
-        }
-        
+      isOrderSummaryOpen = !isOrderSummaryOpen
+      $('#order-wrapper').slideToggle(500)
+      if(isOrderSummaryOpen){
+          $('#order-summary-button-title').text('Hide order summary')
+          $('#order-summary-button-arrow').css('transform', 'rotate(180deg)')
+      }
+      else{
+          $('#order-summary-button-title').text('Show order summary')
+          $('#order-summary-button-arrow').css('transform', 'rotate(0deg)')
+      }
     }
     
 
-    orderSummaryBTN.addEventListener('click', onClickOrderSummary)
+    $('#order-summary-button').click(onClickOrderSummary)
 }
 
 function initMap() {

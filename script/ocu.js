@@ -1,6 +1,3 @@
-const incrementBTN = document.getElementById('increment')
-const decrementBTN = document.getElementById('decrement')
-const numberOfItemsDOM = document.getElementById('number-of-items')
 const frontImageDOM = document.getElementById('front-image')
 const itemDetail = document.getElementById('item-detail')
 const thumbnailBTN = document.querySelectorAll('#thumbnail')
@@ -27,14 +24,11 @@ thumbnailBTN[0].checked = true
 const onLoad = () => {
 
     function increment(){
-        const num = +numberOfItemsDOM.value
-        numberOfItemsDOM.value = num + 1        
+        $('#number-of-items').val(+$('#number-of-items').val() + 1)    
     }
 
     function decrement(){
-        const num = +numberOfItemsDOM.value
-        if(num > 1)
-        numberOfItemsDOM.value = num - 1
+        if(+$('#number-of-items').val() > 1) $('#number-of-items').val(+$('#number-of-items').val() - 1)  
     }
 
     function selectThumbnail(){
@@ -48,9 +42,8 @@ const onLoad = () => {
     thumbnailBTN[0].onclick = selectThumbnail
     thumbnailBTN[1].onclick = selectThumbnail
     thumbnailBTN[2].onclick = selectThumbnail
-    incrementBTN.onclick = increment
-    decrementBTN.onclick = decrement
-
+    $('#increment').click(increment)
+    $('#decrement').click(decrement)
 }
 
 window.onload = onLoad

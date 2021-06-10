@@ -71,12 +71,10 @@
 }
 
 .right-card .order-wrapper {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   margin-left: -10px;
   padding-left: 10px;
-  transition: max-height .25s ease;
 }
 
 .right-card .total-wrapper {
@@ -622,28 +620,15 @@
   }
 }
 
-.left-card .different-address-form {
-  overflow: hidden;
-  transition: all .25s ease;
-}
-
-.left-card .different-address-form.open {
-  max-height: 999px;
-}
-
-.left-card .different-address-form.close {
-  max-height: 0;
-}
-
-.left-card .different-address-form .input {
+.left-card #different-address-form .input {
   margin-bottom: 0;
 }
 
-.left-card .different-address-form .input-wrapper {
+.left-card #different-address-form .input-wrapper {
   margin-top: 0;
 }
 
-.left-card .different-address-form .address {
+.left-card #different-address-form .address {
   display: none;
 }
 
@@ -897,18 +882,7 @@
 
 .left-card .payment-input-wrapper {
   background: #F6F6F6;
-  overflow: hidden;
-  transition: all .25s ease;
-}
-
-.left-card .payment-input-wrapper.open {
-  max-height: 999px;
   padding: 10px;
-}
-
-.left-card .payment-input-wrapper.close {
-  max-height: 0;
-  padding: 0;
 }
 
 .left-card .payment-input-wrapper .input {
@@ -949,13 +923,10 @@
 }
 
 .left-card .paypal-info {
-  max-height: 0;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: max-height .25 ease-in-out;
 }
 
 .left-card .paypal-info p {
@@ -1352,7 +1323,6 @@
 
 .ocu-page .order-wrapper .items-wrapper .menu-wrapper .img-button img {
   width: 100%;
-  transition: all .25s ease-in-out;
 }
 
 .ocu-page .order-wrapper .items-wrapper .menu-wrapper .img-button img:hover, .ocu-page .order-wrapper .items-wrapper .menu-wrapper .img-button img:focus {
@@ -1536,7 +1506,7 @@
   justify-content: center;
   width: 100%;
   user-select: none;
-  transition: all .25s ease-in-out;
+  transition: background .25s ease-in-out;
 }
 
 .ocu-page .order-wrapper .seleted-order .number-wrapper .incre:hover, .ocu-page .order-wrapper .seleted-order .number-wrapper .incre:focus,
@@ -1556,7 +1526,7 @@
   text-align: center;
   padding: 22px;
   display: block;
-  transition: all .25s ease-in-out;
+  transition: background .25s ease-in-out;
 }
 
 .ocu-page .order-wrapper .seleted-order .purchase:hover, .ocu-page .order-wrapper .seleted-order .purchase:focus {
@@ -1586,7 +1556,7 @@
   padding: 16px;
   font-family: 'Hurme-Geometric-Sans-3-light';
   display: block;
-  transition: all .25s ease-in-out;
+  transition: background .25s ease-in-out;
 }
 
 .ocu-page .order-wrapper .seleted-order .decline:hover, .ocu-page .order-wrapper .seleted-order .decline:focus {
@@ -1600,7 +1570,7 @@
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 390px) {
   .ocu-page .order-wrapper .seleted-order .decline {
     font-size: .6em;
     padding: 20px 10px;

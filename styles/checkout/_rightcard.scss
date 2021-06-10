@@ -60,12 +60,10 @@
   }
 
   .order-wrapper{
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     margin-left: -10px;
     padding-left: 10px;
-    transition: max-height .25s ease;
   }
 
 
