@@ -1,8 +1,10 @@
 .left-card {
     padding-right: 2.5rem;
+    box-shadow: 5px 0px 7.5px -2px #00000015;
 
     @media screen and (max-width: 1200px) {
       padding-right: 0;
+      box-shadow: none;
     }
 
     .shipping-wrapper, .payment-wrapper{
@@ -27,57 +29,48 @@
     .input,
     select {
       text-align: left;
-      font-family: inherit;
       padding: 0 10px;
       letter-spacing: 0.05px;
       color: #717171;
       opacity: 1;
       border: 0.5px solid #ced4da;
-      border-radius: 3px;
+      border-radius: 4px;
       width: 100%;
       margin-top: 9px;
-      font-size: 16px;
+      font-size: 18px;
       height: 45px;
       font-family: 'Hurme-Geometric-Sans-3-light';
       background: transparent;
+      transition: box-shadow .25s ease-in-out;
 
-      @media screen and (max-width: 576px) {
-        margin: 0;
-        border-radius: 0px;
+      @media screen and (max-width: 410px) {
+        font-size: 16px;
       }
   
       &:focus-within,
       :focus {
         color: #333;
-        border: 0.5px solid #717171;
+        border: 0.5px solid #ced4da;
+        box-shadow: 0 0 0 0.2rem #8686863d;
         outline: none;
+        z-index: 2;
       }
     }
 
-    input[name="firstName"]{
-      @media screen and (max-width: 576px) {
-        margin: 0;
-        border-radius: 3px 3px 0 0;
-      }
-    }
-    input[name="phoneNumber"]{
-      @media screen and (max-width: 576px) {
-        margin: 0;
-        border-radius: 0 0 3px 3px;
-      }
-    }
 
     label{
       user-select: none;
       padding: 10px 20px;
       letter-spacing: 0.05px;
-      color: #717171;
+      color: #212529;
       opacity: 1;
       border: 0.5px solid #ced4da;
       height: 45px;
       font-family: 'Hurme-Geometric-Sans-3-light';
+      font-size: 18px;
       @media screen and (max-width: 410px) {
         padding: 10px;
+        font-size: 16px;
       }
     }
   
@@ -86,37 +79,13 @@
       appearance: none;
     }
 
-    .address{
-      .input{
-        @media screen and (max-width: 576px) {
-          border: 0.5px solid #ced4da;
-          border-top: none;
-
-            &:first-child{
-                border-top: 0.5px solid #ced4da;
-            }
-        }
-      }
-
-      select{
-        border: 0.5px solid #ced4da;
-        @media screen and (max-width: 576px) {
-          border: 0.5px solid #ced4da;
-          border-top: none;
-        }
-      }
-
-    }
-
     #different-address-form{
+      margin-top: 0;
       .input{
         margin-bottom: 0;
       }
       .input-wrapper{
         margin-top: 0;
-      }
-      .address{
-        display: none;
       }
     }
   
@@ -165,14 +134,15 @@
     }
   
     .submit-button {
-      display: block;
-      padding: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: #33b159;
       text-transform: uppercase;
       font-size: 23px;
-      line-height: 27px;
+      line-height: 1;
       font-family: 'Hurme-Geometric-Sans-3-bold';
-      letter-spacing: 0px;
+      letter-spacing: 0;
       color: #fff;
       margin-top: 1rem;
       margin-bottom: 2rem;
@@ -182,6 +152,7 @@
       cursor: pointer;
       width: max-content;
       width: 350px;
+      height: 55px;
       transition: all .25s ease-in-out;
 
       &:hover, &:focus{
@@ -191,7 +162,6 @@
       @media screen and (max-width: 576px) {
         margin-left: auto;
         margin-right: auto;
-        padding: 1rem;
         width: 100%;
         margin-bottom: 1rem;
       }
@@ -216,6 +186,7 @@
         font-weight: normal;
         width: 50%;
         transition: all .25s ease-in-out;
+        border: 1px solid #fff;
         border-bottom: 1px solid #ced4da;
         @media screen and (max-width: 1200px) {
           font-size: 18px;
@@ -226,9 +197,14 @@
           border-bottom: 1px solid #ced4da00;
         }
         &.idle {
+
           border-bottom: 1px solid #ced4da;
           color: #ced4da;
           cursor: pointer;
+          transition: all .25s ease-in-out;
+          &:hover{
+            border: 1px solid #ced4da;
+          }
         }
       }
     }
@@ -349,14 +325,8 @@
       background: #F6F6F6;
       padding: 10px;
 
-      .input{
-        margin-bottom: 5px;
-        height: 35px;
-        border-radius: 3px;
-        @media screen and (max-width: 1200px) {
-          font-size: 0.75rem;
-          padding: 10px;
-        }
+      input[placeholder="Card number"]{
+        margin-top: 0;
       }
 
       img{
@@ -370,12 +340,8 @@
       }
 
       .grid-3 {   
-        @media screen and (max-width: 576px) {
-          grid-template-columns: repeat(3, 1fr);
-          grid-gap: .5rem;
-        }
 
-        @media screen and (max-width: 390px) {
+        @media screen and (max-width: 576px) {
           grid-template-columns: 1fr;
           grid-gap: 0;
         }

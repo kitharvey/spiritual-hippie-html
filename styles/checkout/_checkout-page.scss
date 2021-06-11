@@ -3,19 +3,21 @@
 
 .left-card,
 .right-card {
-  width: 100%;
   padding-top: 40px;
-
 }
 
 .left-card{
+  width: 620px;
   @media screen and (max-width: 1200px) {
+    width: 100%;
     padding-top: 0;
   }
 }
 
 .right-card{
+  width: 520px;
   @media screen and (max-width: 1200px) {
+    width: 100%;
     padding-bottom: 0;
     padding-top: 10px;
   }
@@ -23,7 +25,7 @@
 
 .checkout-page {
   display: flex;
-  justify-content: center;
+  flex-shrink: unset;
 
   @media screen and (max-width: 1200px) {
     flex-direction: column-reverse;
@@ -34,20 +36,6 @@
   min-height: 100vh;
   padding-bottom: 3.5625rem;
   position: relative;
-  &::before{
-    position: absolute;
-    content: "";
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-    box-shadow: 5px 0px 7.5px 0px #00000015;
-    padding-right: 2.5rem;
-
-    @media screen and (max-width: 1200px) {
-      box-shadow: none;
-      padding-right: 0;
-    }
-  }
 }
 
 .product {
