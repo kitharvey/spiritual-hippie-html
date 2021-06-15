@@ -78,15 +78,14 @@
         .seleted-order{
             .price-wrapper{
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
                 justify-content: center;
                 .prev-price{
                     text-align: left;
                     font-size: 2.8em;
                     letter-spacing: 0px;
                     color: #E8202D;
-                    margin-right: 20px;
-                    margin-bottom: 10px;
+                    margin-right: 10px;
                     position: relative;
                     @media screen and (max-width: 1200px) {
                         font-size: 1.8125em;
@@ -127,7 +126,7 @@
             .snh{
                 font-size: 1.5em;
                 letter-spacing: 2.34px;
-                padding: 19px 0;
+                padding-bottom: 20px;
                 border-bottom: 1px solid #D6D6D6;
                 text-align: center;
 
@@ -144,10 +143,9 @@
             .dnq{
                 font-size: 1.5em;
                 text-align: center;
-                padding: 19px 0;
+                margin-top: 20px;
                 @media screen and (max-width: 1200px) {
                     font-size: 1em;
-                    padding: 16px 0;
                 }
             }
             .details{
@@ -156,6 +154,7 @@
                 display: flex;
                 align-items: center;
                 height: 45px;
+                margin-top: 15px;
 
                 @media screen and (max-width: 576px) {
                     padding: 10px;
@@ -184,7 +183,7 @@
             }
             .number-wrapper{
                 width: 100%;
-                margin-top: 10px;
+                margin-top: 15px;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 border: 0.5px solid #C4C4C4;
@@ -237,7 +236,7 @@
             }
 
             .purchase{
-                margin-top: 10px;
+                margin-top: 15px;
                 background: #33B159;
                 letter-spacing: 0px;
                 color: #FFFFFF;
@@ -297,6 +296,7 @@
         text-align: center;
         padding-bottom: 17px;
         border-bottom: 1px solid #C4C4C4;
+        word-spacing: -5px;
 
 
         @media screen and (max-width: 1200px) {
@@ -314,6 +314,7 @@
         text-align: center;
         font-weight: 300;
         letter-spacing: 1.8px;
+        word-spacing: -3px;
 
         @media screen and (max-width: 1200px) {
             font-size: 0.875em;
@@ -328,10 +329,11 @@
 
         svg{
             margin-bottom: -5px;
+            margin-right: 5px;
             height: 36px;
             width: 36px;
             @media screen and (max-width: 1200px) {
-                margin-bottom: 0;
+                margin-bottom: -2.5px;
                 height: 14px;
                 width: 14px;
             }
