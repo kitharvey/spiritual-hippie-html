@@ -1009,7 +1009,6 @@
 
 @media screen and (max-width: 410px) {
   .product {
-    padding: 1em 0;
     grid-gap: 1em;
   }
 }
@@ -1685,7 +1684,7 @@
   background: #e4e4e4;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 576px) {
   .thank-you-wrapper .shipment-wrapper .shipment-top .button {
     padding: 12px 0;
     text-align: center;
