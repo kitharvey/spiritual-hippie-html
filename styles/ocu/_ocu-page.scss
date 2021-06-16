@@ -129,7 +129,7 @@
                 padding-bottom: 20px;
                 border-bottom: 1px solid #D6D6D6;
                 text-align: center;
-
+                word-spacing: -5px;
                 @media screen and (max-width: 1200px) {
                     font-size: 1.25em;
                     padding: 0;
@@ -144,8 +144,10 @@
                 font-size: 1.5em;
                 text-align: center;
                 margin-top: 20px;
+                word-spacing: -5px;
                 @media screen and (max-width: 1200px) {
                     font-size: 1em;
+                    word-spacing: -3px;
                 }
             }
             .details{
