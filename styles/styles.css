@@ -1305,19 +1305,6 @@
   z-index: -1;
 }
 
-.ocu-page .order-wrapper .seleted-order .price-wrapper .only {
-  letter-spacing: 0px;
-  margin-right: 10px;
-  font-size: 3em;
-  padding-bottom: 10px;
-}
-
-@media screen and (max-width: 1200px) {
-  .ocu-page .order-wrapper .seleted-order .price-wrapper .only {
-    font-size: 1.8125em;
-  }
-}
-
 .ocu-page .order-wrapper .seleted-order .price-wrapper .current-price {
   font-size: 4em;
   letter-spacing: 0px;
@@ -1536,6 +1523,7 @@
   .header-title .title {
     font-size: 1.3125em;
     padding-bottom: 13px;
+    word-spacing: -3px;
   }
 }
 
@@ -1557,6 +1545,7 @@
     padding: 0 40px;
     margin-top: 18.8px;
     margin-bottom: 15px;
+    word-spacing: -3px;
   }
 }
 
