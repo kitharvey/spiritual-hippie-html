@@ -29,7 +29,7 @@
     .input,
     select {
       text-align: left;
-      padding: 0 10px;
+      padding: 10px;
       letter-spacing: 0.05px;
       color: #717171;
       opacity: 1;
@@ -38,7 +38,7 @@
       width: 100%;
       margin-top: 9px;
       font-size: 18px;
-      height: 45px;
+      line-height: 1.2;
       font-family: 'Hurme-Geometric-Sans-3-light';
       background: transparent;
       transition: box-shadow .25s ease-in-out;
@@ -60,16 +60,16 @@
 
     label{
       user-select: none;
-      padding: 0 20px;
+      padding: 10px 20px;
       letter-spacing: 0.05px;
       color: #212529;
       opacity: 1;
       border: 0.5px solid #ced4da;
-      height: 45px;
       font-family: 'Hurme-Geometric-Sans-3-light';
       font-size: 18px;
+      line-height: 1.2;
       @media screen and (max-width: 410px) {
-        padding: 0 10px;
+        padding: 10px;
         font-size: 16px;
       }
     }
