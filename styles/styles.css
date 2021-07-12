@@ -1846,8 +1846,10 @@
 
 body {
   font-family: 'Hurme-Geometric-Sans-3';
-  font-size: 100%;
-  line-height: 1.333%;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* stop ios zooming text  on orientation change */
+  -ms-text-size-adjust: 100%;
 }
 
 a {
