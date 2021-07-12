@@ -529,12 +529,12 @@
   letter-spacing: 0.05px;
   color: #717171;
   opacity: 1;
-  border: 1px solid #ced4da;
+  border: 0.5px solid #ced4da;
   border-radius: 4px;
   width: 100%;
   margin-top: 9px;
   font-size: 18px;
-  line-height: 42px;
+  height: 45px;
   font-family: 'Hurme-Geometric-Sans-3-light';
   background: transparent;
   transition: box-shadow .25s ease-in-out;
@@ -564,8 +564,8 @@
   letter-spacing: 0.05px;
   color: #212529;
   opacity: 1;
-  border: 1px solid #ced4da;
-  line-height: 42px;
+  border: 0.5px solid #ced4da;
+  height: 45px;
   font-family: 'Hurme-Geometric-Sans-3-light';
   font-size: 18px;
 }
@@ -1846,6 +1846,8 @@
 
 body {
   font-family: 'Hurme-Geometric-Sans-3';
+  font-size: 100%;
+  line-height: 1.333%;
 }
 
 a {
