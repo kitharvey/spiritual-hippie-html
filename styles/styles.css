@@ -459,6 +459,7 @@
   justify-content: center;
   width: 352px;
   transition: all .25s ease-in-out;
+  line-height: 1;
 }
 
 .right-card .advert .button:hover {
@@ -534,7 +535,7 @@
   width: 100%;
   margin-top: 9px;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1;
   font-family: 'Hurme-Geometric-Sans-3-light';
   background: transparent;
   transition: box-shadow .25s ease-in-out;
@@ -567,7 +568,7 @@
   border: 0.5px solid #ced4da;
   font-family: 'Hurme-Geometric-Sans-3-light';
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 @media screen and (max-width: 410px) {
