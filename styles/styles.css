@@ -226,7 +226,8 @@
   background-color: #f6f6f6;
   font-family: inherit;
   font-size: 1.25em;
-  padding: 10px 16px;
+  line-height: 45px;
+  padding: 0px 16px;
   border: none;
   outline: none;
   width: 100%;
@@ -526,7 +527,7 @@
 .left-card .input,
 .left-card select {
   text-align: left;
-  padding: 10px;
+  padding: 0 10px;
   letter-spacing: 0.05px;
   color: #717171;
   opacity: 1;
@@ -535,7 +536,7 @@
   width: 100%;
   margin-top: 9px;
   font-size: 18px;
-  line-height: 1;
+  line-height: 38px;
   font-family: 'Hurme-Geometric-Sans-3-light';
   background: transparent;
   transition: box-shadow .25s ease-in-out;

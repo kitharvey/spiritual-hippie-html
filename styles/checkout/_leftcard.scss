@@ -29,7 +29,7 @@
     .input,
     select {
       text-align: left;
-      padding: 10px;
+      padding: 0 10px;
       letter-spacing: 0.05px;
       color: #717171;
       opacity: 1;
@@ -38,7 +38,7 @@
       width: 100%;
       margin-top: 9px;
       font-size: 18px;
-      line-height: 1;
+      line-height: 38px;
       font-family: 'Hurme-Geometric-Sans-3-light';
       background: transparent;
       transition: box-shadow .25s ease-in-out;
