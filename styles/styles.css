@@ -45,7 +45,6 @@
 }
 
 .right-card .order-summary-button .total-price {
-  font-family: 'Hurme-Geometric-Sans-3-bold';
   font-size: 1rem;
 }
 
@@ -123,10 +122,6 @@
   margin-right: 10px;
 }
 
-.right-card .total-wrapper .discount-wrapper span {
-  font-family: 'Hurme-Geometric-Sans-3-semibold';
-}
-
 .right-card .total-wrapper .discount {
   color: #e8202d;
 }
@@ -152,7 +147,6 @@
 .right-card .total-wrapper .total {
   text-align: left;
   font-size: 1.5em;
-  font-family: 'Hurme-Geometric-Sans-3-bold';
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -171,7 +165,6 @@
 }
 
 .right-card .total-wrapper .total span {
-  font-family: 'Hurme-Geometric-Sans-3';
   text-align: left;
   font-size: 19px;
   font-weight: normal;
@@ -226,8 +219,7 @@
   background-color: #f6f6f6;
   font-family: inherit;
   font-size: 1.25em;
-  line-height: 45px;
-  padding: 0px 16px;
+  padding: 10px 16px;
   border: none;
   outline: none;
   width: 100%;

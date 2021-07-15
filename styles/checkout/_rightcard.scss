@@ -39,7 +39,7 @@
     }
 
     .total-price{
-      font-family: 'Hurme-Geometric-Sans-3-bold';
+      // font-family: 'Hurme-Geometric-Sans-3-bold';
       font-size: 1rem;
     }
     .order-title{
@@ -102,7 +102,7 @@
       }
 
       span{
-        font-family: 'Hurme-Geometric-Sans-3-semibold';
+        // font-family: 'Hurme-Geometric-Sans-3-semibold';
       }
     }
 
@@ -126,7 +126,7 @@
     .total {
       text-align: left;
       font-size: 1.5em;
-      font-family: 'Hurme-Geometric-Sans-3-bold';
+      // font-family: 'Hurme-Geometric-Sans-3-bold';
       letter-spacing: 0px;
       color: #000000;
       opacity: 1;
@@ -140,7 +140,7 @@
       }
 
       span {
-        font-family: 'Hurme-Geometric-Sans-3';
+        // font-family: 'Hurme-Geometric-Sans-3';
         text-align: left;
         font-size: 19px;
         @media screen and (max-width: 1200px) {
@@ -189,8 +189,7 @@
         background-color: #f6f6f6;
         font-family: inherit;
         font-size: 1.25em;
-        line-height: 45px;
-        padding: 0px 16px;
+        padding: 10px 16px;
         border: none;
         outline: none;
         width: 100%;
