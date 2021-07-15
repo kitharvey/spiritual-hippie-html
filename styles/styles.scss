@@ -11,42 +11,42 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3';
-  src: url(/assets/fonts/HurmeGeometricSans3.otf);
-      // url(/assets/fonts/HurmeGeometricSans3Black.otf),
-      // url(/assets/fonts/HurmeGeometricSans3BlackOblique.otf),
-      // url(/assets/fonts/HurmeGeometricSans3Bold.otf),
-      // url(/assets/fonts/HurmeGeometricSans3BoldOblique.otf),
-      // url(/assets/fonts/HurmeGeometricSans3Hairline.otf),
-      // url(/assets/fonts/HurmeGeometricSans3HairlineOblique.otf),
-      // url(/assets/fonts/HurmeGeometricSans3Light.otf),
-      // url(/assets/fonts/HurmeGeometricSans3LightOblique.otf),
-      // url(/assets/fonts/HurmeGeometricSans3Oblique.otf),
-      // url(/assets/fonts/HurmeGeometricSans3SemiBold.otf),
-      // url(/assets/fonts/HurmeGeometricSans3SemiBoldOblique.otf),
-      // url(/assets/fonts/HurmeGeometricSans3Thin.otf),
-      // url(/assets/fonts/HurmeGeometricSans3ThinOblique.otf);
-}
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3-Black';
-  src: url(/assets/fonts/HurmeGeometricSans3Black.otf);
-}
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3-light';
-  src: url(/assets/fonts/HurmeGeometricSans3Light.otf);
-}
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3-bold';
-  src: url(/assets/fonts/HurmeGeometricSans3Bold.otf);
-}
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3-semibold';
-  src: url(/assets/fonts/HurmeGeometricSans3SemiBold.otf);
-}
+// @font-face {
+//   font-family: 'Hurme-Geometric-Sans-3';
+//   src: url(/assets/fonts/HurmeGeometricSans3.otf);
+//       // url(/assets/fonts/HurmeGeometricSans3Black.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3BlackOblique.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3Bold.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3BoldOblique.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3Hairline.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3HairlineOblique.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3Light.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3LightOblique.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3Oblique.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3SemiBold.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3SemiBoldOblique.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3Thin.otf),
+//       // url(/assets/fonts/HurmeGeometricSans3ThinOblique.otf);
+// }
+// @font-face {
+//   font-family: 'Hurme-Geometric-Sans-3-Black';
+//   src: url(/assets/fonts/HurmeGeometricSans3Black.otf);
+// }
+// @font-face {
+//   font-family: 'Hurme-Geometric-Sans-3-light';
+//   src: url(/assets/fonts/HurmeGeometricSans3Light.otf);
+// }
+// @font-face {
+//   font-family: 'Hurme-Geometric-Sans-3-bold';
+//   src: url(/assets/fonts/HurmeGeometricSans3Bold.otf);
+// }
+// @font-face {
+//   font-family: 'Hurme-Geometric-Sans-3-semibold';
+//   src: url(/assets/fonts/HurmeGeometricSans3SemiBold.otf);
+// }
 
 body {
-  font-family: 'Hurme-Geometric-Sans-3';
+  // font-family: 'Hurme-Geometric-Sans-3';
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;/* stop ios zooming text  on orientation change */
 	-ms-text-size-adjust: 100%;

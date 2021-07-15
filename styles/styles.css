@@ -255,7 +255,6 @@
   background-color: #c4c4c4;
   padding: 10px 40px;
   text-align: left;
-  font-family: 'Hurme-Geometric-Sans-3-bold';
   font-size: 1.25em;
   letter-spacing: 0px;
   color: #ffffff;
@@ -389,7 +388,6 @@
 
 .right-card .advert .top .details .price {
   text-align: center;
-  font-family: 'Hurme-Geometric-Sans-3-semibold';
   font-size: 1.5rem;
   letter-spacing: 0px;
   color: #000000;
@@ -401,7 +399,6 @@
 
 .right-card .advert .top .details .price span {
   text-align: left;
-  font-family: 'Hurme-Geometric-Sans-3';
   font-weight: 300;
   font-size: 14px;
   text-decoration: line-through;
@@ -413,7 +410,6 @@
 
 .right-card .advert .top .details .name {
   text-align: center;
-  font-family: 'Hurme-Geometric-Sans-3-bold';
   font-size: 1.25em;
   letter-spacing: 0px;
   color: #000000;
@@ -449,7 +445,6 @@
   background: transparent;
   border: 2px solid #000000;
   padding: 10px 0;
-  font-family: 'Hurme-Geometric-Sans-3-semibold';
   font-size: 1.25em;
   text-align: center;
   letter-spacing: 0px;
@@ -537,7 +532,6 @@
   margin-top: 9px;
   font-size: 18px;
   line-height: 38px;
-  font-family: 'Hurme-Geometric-Sans-3-light';
   background: transparent;
   transition: box-shadow .25s ease-in-out;
 }
@@ -567,7 +561,6 @@
   color: #212529;
   opacity: 1;
   border: 0.5px solid #ced4da;
-  font-family: 'Hurme-Geometric-Sans-3-light';
   font-size: 18px;
   line-height: 1;
 }
@@ -656,7 +649,6 @@
   text-transform: uppercase;
   font-size: 23px;
   line-height: 1;
-  font-family: 'Hurme-Geometric-Sans-3-bold';
   letter-spacing: 0;
   color: #fff;
   margin-top: 1rem;
@@ -1023,7 +1015,6 @@
 
 .product .price-wrapper .price {
   text-align: left;
-  font-family: 'Hurme-Geometric-Sans-3-semibold';
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
@@ -1042,7 +1033,6 @@
 
 .product .price-wrapper .free {
   text-align: left;
-  font-family: 'Hurme-Geometric-Sans-3-semibold';
   letter-spacing: 0px;
   font-size: 1.25em;
   color: #e8202d;
@@ -1058,7 +1048,6 @@
 
 .product .info .name {
   text-align: left;
-  font-family: 'Hurme-Geometric-Sans-3-semibold';
   letter-spacing: 0px;
   font-size: 16px;
   color: #000000;
@@ -1075,7 +1064,6 @@
 
 .product .info .description {
   text-align: left;
-  font-family: 'Hurme-Geometric-Sans-3';
   font-size: 14px;
   letter-spacing: 0px;
   color: #333333;
@@ -1093,7 +1081,6 @@
 .product .info .details {
   display: flex;
   flex-wrap: wrap;
-  font-family: 'Hurme-Geometric-Sans-3';
   line-height: 1.2;
   padding: 2px 0;
 }
@@ -1174,13 +1161,11 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-family: 'Hurme-Geometric-Sans-3-bold';
   line-height: 1;
 }
 
 @media screen and (max-width: 1200px) {
   .product .img-wrapper .qnty {
-    font-family: 'Hurme-Geometric-Sans-3';
     font-size: 0.65em;
     height: 13px;
     width: 13px;
@@ -1821,33 +1806,7 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3';
-  src: url(/assets/fonts/HurmeGeometricSans3.otf);
-}
-
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3-Black';
-  src: url(/assets/fonts/HurmeGeometricSans3Black.otf);
-}
-
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3-light';
-  src: url(/assets/fonts/HurmeGeometricSans3Light.otf);
-}
-
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3-bold';
-  src: url(/assets/fonts/HurmeGeometricSans3Bold.otf);
-}
-
-@font-face {
-  font-family: 'Hurme-Geometric-Sans-3-semibold';
-  src: url(/assets/fonts/HurmeGeometricSans3SemiBold.otf);
-}
-
 body {
-  font-family: 'Hurme-Geometric-Sans-3';
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   /* stop ios zooming text  on orientation change */
